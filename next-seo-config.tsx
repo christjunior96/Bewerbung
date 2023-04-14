@@ -1,7 +1,6 @@
 export default {
     title: "ecozins.de | Klimafreundlich Rendite erzielen | ab 250€",
     description:"Bei ecozins können Sie ganz einfach online zwischen 250 und 25.000 Euro in geprüfte klimafreundliche Projekte investieren. Sie profitieren von einer attraktiven Rendite, die deutlich über dem Marktzinsniveau liegt.",
-    themeColor:"#5aade7",
     openGraph: {
       type: 'website',
       locale: 'de_DE',
