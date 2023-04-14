@@ -47,11 +47,13 @@ const ez = [
 ]
 
 const unterlagen = [
-  {"text":"Lebenslauf","url":"/Lebenslauf.pdf","image":"/tobedeleted/lebenslauf.png"},
+  
   {"text":"Zertifikat Flutter","url":"/Zertifikat-Flutter.pdf","image":"/tobedeleted/flutter.png"},
   {"text":"Zertifikat Websecurity","url":"/Zertifikat-Websecurity.pdf","image":"/tobedeleted/security.png"},
   {"text":"Zertifikat SAP","url":"/Zertifikat-SAP.pdf","image":"/tobedeleted/sap.png"},
 ]
+
+const lebenslauf = [ {"text":"Lebenslauf","url":"/Lebenslauf.pdf","image":"/tobedeleted/lebenslauf.png"},]
 
 
 const StyledDiv = styled.div`
@@ -145,7 +147,12 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <PageSlider items={selbstst}/>
         </Section>
         <Section backgroundColor='transparent' sectionSpace={10}>
-            <Headline h={2} small text='Unterlagen'/>
+            <Headline h={2} small text='Lebenslauf'/>
+            <Space height={5}/>
+            <PageSlider items={lebenslauf}/>
+        </Section>
+        <Section backgroundColor='transparent' sectionSpace={10}>
+            <Headline h={2} small text='Zertifikate'/>
             <Space height={5}/>
             <PageSlider items={unterlagen}/>
         </Section>
