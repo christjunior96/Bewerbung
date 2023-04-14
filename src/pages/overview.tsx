@@ -107,7 +107,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             </Text>
             <Space height={7}/>
             <Headline h={3} small text='Verwendete Tools'/>
-            <InvestedProjects projects={['NextJS','TypeScript', 'Prisma', 'PostgreSQL', 'Styled Components','JWT Token', 'HTML','CSS']} blue/>
+            <InvestedProjects projects={['NextJS','TypeScript', 'Prisma', 'PostgreSQL', 'Styled Components','JWT Token', 'HTML','CSS','figma']} blue/>
             <PageSlider items={neueEcozins}/>
         </Section>
         <Section backgroundColor='transparent' sectionSpace={10}>
@@ -118,7 +118,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             </Text>
             <Space height={5}/>
             <Headline h={3} small text='Verwendete Tools'/>
-            <InvestedProjects projects={['Wordpress','JavaScript','Cleverreach', 'HTML', 'CSS']} blue/>
+            <InvestedProjects projects={['Wordpress','JavaScript','Cleverreach', 'HTML', 'CSS', 'Photoshop']} blue/>
             <Space height={5}/>
             <PageSlider items={ez}/>
         </Section>
