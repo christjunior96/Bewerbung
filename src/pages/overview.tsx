@@ -86,12 +86,12 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
         <ResponsiveImage alt='Louis Christ' src='/tobedeleted/LouisMain.jpg' width='150px' borderRadius='999px'/>
         </Row>
         <Space height={3}/>
-        <Headline h={1} small text='Herzlich Willkommen!'/>
+        <Headline h={1} small text='Herzlich willkommen!'/>
         <Space height={5}/>
         <Section backgroundColor='transparent'>
             <Row alignItems='center' rowSpace={10} justifyContent='center' breakMobilePx={500} distanceMobile={5}>
             <Text textAlign='center'>
-            Auf dieser Website finden Sie eine Auswahl der Projekte, an denen ich beteiligt war, und erhalten einen Einblick in meine Fähigkeiten und meinen vielseitigen Ansatz zur Problemlösung.<br/>
+            Auf dieser Website finden Sie eine Auswahl der Projekte, an denen ich beteiligt war und erhalten einen Einblick in meine Fähigkeiten und meinem vielseitigen Ansatz zur Problemlösung.<br/>
             Vielen Dank für Ihren Besuch und viel Spaß beim Entdecken von diesem Portfolio!
             </Text>
             </Row>
@@ -101,7 +101,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Headline h={2} small text='ecozins Relaunch'/>
             <Space height={5}/>
             <Text textAlign='center'>
-            Dies ist das letzte Projekt, an dem ich gearbeitet habe. Leider wurde dieses Projekt nie zu Ende Gebracht, dennoch wäre es mein bisher größtes Projekt geworden, daher möchte ich hier zeigen, was bis dahin entstanden ist. Das Projekt wurde ohne ein konventionelles CMS erstellt, stattdessen wurde ein eigenes CMS mit NextJS Entwickelt, um die Themen und Projektseiten zu pflegen.<br/><br/> <strong>Hinweis:</strong> Kundenkonto ist vollständig klickbar!
+            Dies ist das letzte Projekt, an dem ich gearbeitet habe. Leider wurde dieses Projekt nie zu Ende gebracht, dennoch wäre es mein bisher größtes Projekt geworden, daher möchte ich hier zeigen, was bis dahin entstanden ist. Das Projekt wurde ohne ein konventionelles CMS erstellt, stattdessen wurde ein eigenes CMS mit NextJS entwickelt, um die Themen und Projektseiten zu pflegen.<br/><br/> <strong>Hinweis:</strong> Kundenkonto ist vollständig klickbar!
             </Text>
             <Space height={7}/>
             <Headline h={3} small text='Verwendete Tools'/>
@@ -124,7 +124,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Headline h={2} small text='Whitelabel'/>
             <Space height={5}/>
             <Text textAlign='center'>
-            Eines meiner ersten Projekte, war die Umsetzung einer Whitelabel-Lösung für die AUDITcapital. Diese Whitelabel-Lösung wurde für verschiedene Kunden erstellt, die alle ihre eigene Domain besitzen. Die Whitelabel-Lösung wurde mit Wordpress erstellt, jedoch wurde kein Template verwendet, sondern die Website wurde von Grund auf neu erstellt nach einer Designvorlage. Die Website ist vollständig responsive und wurde mit dem Divi-Pagebuilder erstellt.
+            Eines meiner ersten Projekte war die Umsetzung einer Whitelabel-Lösung für die AUDITcapital. Diese Whitelabel-Lösung wurde für verschiedene Kunden erstellt, die alle ihre eigene Domain besitzen. Die Whitelabel-Lösung wurde mit Wordpress erstellt, jedoch ohne Template, sie ist von Grund auf neu programmiert nach einer Designvorlage. Die Website ist vollständig responsive und wurde mit dem Divi-Pagebuilder erstellt.
             </Text>
             <Space height={5}/>
             <Headline h={3} small text='Verwendete Tools'/>
@@ -136,7 +136,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Headline h={2} small text='Projekte aus meiner Selbstständigkeit'/>
             <Space height={5}/>
             <Text textAlign='center'>
-            Während meines Studium hatte ich ein Kleingewerbe als Webdesigner und habe verschiedene Projekte für Kunden umgesetzt. Diese Projekte sind alle mit Wordpress erstellt worden, teilweise mit Divi als Eigenentwicklung, teilweise mit einem Template.
+            Während meines Studiums habe ich ein Kleingewerbe eröffnet und verschiedene Webdesign-Projekte für Kunden umgesetzt. Diese Projekte sind alle mit Wordpress erstellt worden, teilweise mit Divi als Eigenentwicklung, teilweise mit einem Template.
             </Text>
             <Space height={5}/>
             <Headline h={3} small text='Verwendete Tools'/>
