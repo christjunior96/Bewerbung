@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" id="svg2634" width="682.66669" height="682.66669" viewBox="0 0 682.66669 682.66669">
+  <defs id="defs2638">
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath2648">
+      <path d="M 0,512 H 512 V 0 H 0 Z" id="path2646"/>
+    </clipPath>
+  </defs>
+  <mask id="custom"><rect id="bg" x="0" y="0" width="100%" height="100%" fill="white"/><g transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)"/></mask><g mask="url(#custom)"><g id="g2640" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)">
+    <g id="g2642">
+      <g id="g2644" clip-path="url(#clipPath2648)">
+        <g id="g2650" transform="translate(341,120)">
+          <path d="m 0,0 v -40 c 0,-33.137 -26.863,-60 -60,-60 h -201 c -33.137,0 -60,26.863 -60,60 v 352 c 0,33.137 26.863,60 60,60 h 201 c 33.137,0 60,-26.863 60,-60 v -40" style="fill:none;stroke:#000000;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2652"/>
+        </g>
+        <g id="g2654" transform="translate(487,255)">
+          <path d="M 0,0 H -271" style="fill:none;stroke:#000000;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2656"/>
+        </g>
+        <g id="g2658" transform="translate(438.4268,189)">
+          <path d="m 0,0 44.786,44.787 c 11.716,11.716 11.716,30.71 0,42.426 L 0,132" style="fill:none;stroke:#000000;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2660"/>
+        </g>
+      </g>
+    </g>
+  </g></g>
+</svg>
