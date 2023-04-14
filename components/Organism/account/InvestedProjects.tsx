@@ -7,6 +7,7 @@ const nunito = Nunito_Sans({ weight: ['200','300','400','600','700','800','900']
 
 interface InvestedCapitalProps {
     projects: string[];
+    blue?: boolean;
 }
 
 const ProjectItemWrapper = styled.div`
@@ -20,21 +21,22 @@ const ProjectItemWrapper = styled.div`
 const Projectitem = styled.div`
     margin: 10px 10px 0px 0px;
     white-space: nowrap;
-    background-color: var(--SOFT_PEALS);
-    color: var(--WELLINGTON);
+    background-color: ${props => props.theme.b ? 'var(--BUTTON_BORDER2)' : 'var(--SOFT_PEALS)'};
+    color:  ${props => props.theme.b ? 'var(--WHITE)' : 'var(--WELLINGTON)'};
+    font-family: ${nunito};
     padding: 3px 15px;
     border-radius: 0.3em;
     font-size: 14px;
 `;
 
-const ActiveCapital = ({ projects }: InvestedCapitalProps) => {
+const InvestedProjects = ({ projects, blue }: InvestedCapitalProps) => {
     return (
         <>
-            <AccountHeadline text="Investierte Projekte"/>
+            {!blue && <AccountHeadline text="Investierte Projekte"/>}
             <ProjectItemWrapper>
                 {projects.map((project, index) => {
                     return (
-                        <Projectitem key={`InvestedProjekt-${index}`}>
+                        <Projectitem className={nunito.className} theme={{b:blue}} key={`InvestedProjekt-${index}`}>
                             {project}
                         </Projectitem>
                     )
@@ -44,4 +46,4 @@ const ActiveCapital = ({ projects }: InvestedCapitalProps) => {
         );
 };
 
-export default ActiveCapital;
+export default InvestedProjects;

@@ -6,6 +6,7 @@ import {baseurl} from "../../utils/constants"
 import Link from "next/link";
 import Router from 'next/router'
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import cookie from 'cookie';
 
 export default function Login(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [email, setEmail] = useState("");
@@ -113,10 +114,23 @@ export default function Login(props: InferGetServerSidePropsType<typeof getServe
 
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  // Holt sich die Cookies aus dem request
-  
-    return { props: {} };
+  // Prüfen, ob das Passwort-Cookie gesetzt ist
+  const cookies = cookie.parse(context.req.headers.cookie || '');
+  const password = cookies['password'];
+
+  if (password == 'louis_bewerbung') {
+    // Wenn das Passwort-Cookie gesetzt ist, leite den Benutzer zur geschützten Seite weiter
+    return {
+      redirect: {
+        destination: '/overview',
+        permanent: false,
+      },
+    };
   }
+
+  // Wenn das Passwort-Cookie nicht gesetzt ist, zeige die Login-Seite an
+  return { props: {} };
+};
 
 
 

@@ -74,7 +74,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     // Wenn das Passwort-Cookie gesetzt ist, leite den Benutzer zur geschützten Seite weiter
     return {
       redirect: {
-        destination: '/loginPortfolio',
+        destination: '/',
         permanent: false,
       },
     };

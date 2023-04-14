@@ -11,7 +11,7 @@ import Row from 'components/Molecule/Row';
 import Invests from 'components/Organism/account/Invests';
 import { useState } from 'react';
 import Chart from 'components/Organism/account/Chart';
-
+import cookie from 'cookie';
 
 
 export default function Home(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
@@ -42,8 +42,21 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
     )
     }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-// Holt sich die Cookies aus dem request
-
-    return { props: {} };
-}
+    export const getServerSideProps: GetServerSideProps = async (context) => {
+        // Prüfen, ob das Passwort-Cookie gesetzt ist
+        const cookies = cookie.parse(context.req.headers.cookie || '');
+        const password = cookies['password'];
+      
+        if (password != 'louis_bewerbung') {
+          // Wenn das Passwort-Cookie gesetzt ist, leite den Benutzer zur geschützten Seite weiter
+          return {
+            redirect: {
+              destination: '/',
+              permanent: false,
+            },
+          };
+        }
+      
+        // Wenn das Passwort-Cookie nicht gesetzt ist, zeige die Login-Seite an
+        return { props: {} };
+      };

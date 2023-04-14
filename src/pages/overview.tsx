@@ -14,9 +14,27 @@ import Section from 'components/Molecule/Section';
 import ProjektTile from 'components/Molecule/ProjektTile';
 import Link from 'next/link';
 import { Nunito_Sans } from '@next/font/google'
+import PageSlider from 'components/Organism/public/PageSlider';
+import InvestedProjects from 'components/Organism/account/InvestedProjects';
 
 const inter = Nunito_Sans({ subsets: ['latin'], weight:"600" })
 const interSub = Nunito_Sans({ subsets: ['latin'], weight:"300" })
+
+const neueEcozins = [
+  {"text":"Kundenkonto","url":"/account/dashboard","image":"/tobedeleted/account.png"},
+  {"text":"FAQ","url":"/faq","image":"/tobedeleted/faq.png"},
+  {"text":"Karriere","url":"/karriere","image":"/tobedeleted/karriere.png"},
+  {"text":"Projektfinanzierung","url":"/projektfinanzierung","image":"/tobedeleted/Projektfinanz.png"},
+  {"text":"Themenwelten","url":"/themenwelten","image":"/tobedeleted/themenwelten.png"},
+]
+
+const whitelabel = [
+  {"text":"Rotary","url":"https://giessen-spendet.de","image":"/tobedeleted/rotary.png"},
+  {"text":"reon","url":"https://reon-invest.com","image":"/tobedeleted/reon.png"},
+  {"text":"GP Joule","url":"https://gpjoule-investcrowd.de","image":"/tobedeleted/gp.png"},
+  {"text":"ENERPARC","url":"https://invest.enerparc.de","image":"/tobedeleted/enerparc.png"},
+]
+
 
 const StyledDiv = styled.div`
     width: 100%;
@@ -60,57 +78,65 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
     <StyledDiv>
         <Column>
         <Space height={10}/>
+        <Row justifyContent='center'>
+        <ResponsiveImage alt='Louis Christ' src='/tobedeleted/LouisMain.jpg' width='150px' borderRadius='999px'/>
+        </Row>
+        <Space height={3}/>
         <Headline h={1} small text='Herzlich Willkommen!'/>
         <Space height={5}/>
         <Section backgroundColor='transparent'>
-            <Row alignItems='center' rowSpace={10}>
-            <ResponsiveImage alt='Louis Christ' src='/tobedeleted/LouisMain.jpg' width='150px' borderRadius='999px'/>
-            <Text textAlign='left'>
+            <Row alignItems='center' rowSpace={10} justifyContent='center' breakMobilePx={500} distanceMobile={5}>
+            <Text textAlign='center'>
             Auf dieser Website finden Sie eine Auswahl der Projekte, an denen ich beteiligt war, und erhalten einen Einblick in meine Fähigkeiten und meinen vielseitigen Ansatz zur Problemlösung.<br/>
             Vielen Dank für Ihren Besuch und viel Spaß beim Entdecken von diesem Portfolio!
             </Text>
             </Row>
         </Section>
-        <Section backgroundColor='transparent' sectionSpace={10}>
+        <Section backgroundColor='transparent' sectionSpace={5}>
             <Headline h={2} small text='ecozins Relaunch'/>
             <Space height={5}/>
             <Text textAlign='center'>
-            Dies ist das letzte Projekt, an dem ich gearbeitet habe. Leider wurde dieses Projekt nie zu Ende Gebracht, dennoch wäre es mein bisher größtes Projekt geworden, daher möchte ich hier zeigen, was bis dahin entstanden ist.
+            Dies ist das letzte Projekt, an dem ich gearbeitet habe. Leider wurde dieses Projekt nie zu Ende Gebracht, dennoch wäre es mein bisher größtes Projekt geworden, daher möchte ich hier zeigen, was bis dahin entstanden ist. Das Projekt wurde ohne ein konventionelles CMS erstellt, stattdessen wurde ein eigenes CMS mit NextJS Entwickelt, um die Themen und Projektseiten zu pflegen.<br/><br/> <strong>Hinweis:</strong> Kundenkonto ist vollständig klickbar!
             </Text>
-            <Row sizeEvenly alignItems='center' justifyContent='center' distanceMobile={5}  rowSpace={5} breakMobilePx={820}>
-                <Column alignItems='center' columnSpace={4}>
-                <ResponsiveImage alt={'FAQ'} src={'/tobedeleted/faq.png'} width="250px" height="180px" borderRadius="2em" />
-                <StyledLink className={interSub.className} href={'/faq'}>FAQ</StyledLink>
-                </Column>
-                <Column alignItems='center' columnSpace={4}>
-                <ResponsiveImage alt={'FAQ'} src={'/tobedeleted/karriere.png'} width="250px" height="180px" borderRadius="2em" />
-                <StyledLink className={interSub.className} href={'/karriere'}>Karriere</StyledLink>
-                </Column>
-                <Column alignItems='center' columnSpace={4}>
-                <ResponsiveImage alt={'FAQ'} src={'/tobedeleted/Projektfinanz.png'} width="250px" height="180px" borderRadius="2em" />
-                <StyledLink className={interSub.className} href={'/projektfinanzierung'}>Projektfinanzierung</StyledLink>
-                </Column>
-            </Row>
+            <Space height={7}/>
+            <Headline h={3} small text='Verwendete Tools'/>
+            <InvestedProjects projects={['NextJS','TypeScript', 'Prisma', 'PostgreSQL', 'Styled Components','JWT Token', 'HTML','CSS']} blue/>
+            <PageSlider items={neueEcozins}/>
+        </Section>
+        <Section backgroundColor='transparent' sectionSpace={5}>
+            <Headline h={2} small text='ecozins Website'/>
+            <Space height={5}/>
+            <Text textAlign='center'>
+            Während meiner Zeit bei der AUDITcapital habe ich die ecozins Website weiterentwickelt. Dazu gehörte das Gestalten und Umsetzen von neuen Seiten, sowie das Erstellen von neuen Funktionen. Die Website wurde mit Wordpress erstellt und ist vollständig responsive. Außerdem habe ich Newsletter-Templates für Cleverreach erstellt.
+            </Text>
+            <Space height={5}/>
+            <Headline h={3} small text='Verwendete Tools'/>
+            <InvestedProjects projects={['Wordpress','JavaScript','Cleverreach', 'HTML', 'CSS']} blue/>
             <Space height={5}/>
             <Row sizeEvenly alignItems='center' justifyContent='center' distanceMobile={5} breakMobilePx={820}>
                 <Column alignItems='center' columnSpace={4}>
-                <ResponsiveImage alt={'FAQ'} src={'/tobedeleted/themenwelten.png'} width="250px" height="180px" borderRadius="2em" />
-                <StyledLink className={interSub.className} href={'/themenwelten'}>Themenwelten</StyledLink>
-                </Column>
-                <Column alignItems='center' columnSpace={4}>
-                <ResponsiveImage alt={'FAQ'} src={'/tobedeleted/account.png'} width="250px" height="180px" borderRadius="2em" />
-                <StyledLink className={interSub.className} href={'/account/dashboard'}>Kundenkonto</StyledLink>
+                <ResponsiveImage alt={'FAQ'} src={'/tobedeleted/public.png'} width="250px" height="180px" borderRadius="2em" />
+                <StyledLink className={interSub.className} href={'https://www.ecozins.de'}>ecozins</StyledLink>
                 </Column>
             </Row>
         </Section>
         <Section backgroundColor='transparent' sectionSpace={10}>
-            <Headline h={2} small text='ecozins Website'/>
-        </Section>
-        <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='Whitelabel'/>
+            <Space height={5}/>
+            <Text textAlign='center'>
+            Eines meiner ersten Projekte, war die Umsetzung einer Whitelabel-Lösung für die AUDITcapital. Diese Whitelabel-Lösung wurde für verschiedene Kunden erstellt, die alle ihre eigene Domain besitzen. Die Whitelabel-Lösung wurde mit Wordpress erstellt, jedoch wurde kein Template verwendet, sondern die Website wurde von Grund auf neu erstellt nach einer Designvorlage. Die Website ist vollständig responsive und wurde mit dem Divi-Pagebuilder erstellt.
+            </Text>
+            <Space height={5}/>
+            <Headline h={3} small text='Verwendete Tools'/>
+            <InvestedProjects projects={['Divi','Wordpress','JavaScript','Cleverreach', 'HTML', 'CSS']} blue/>
+            <Space height={5}/>
+            <PageSlider items={whitelabel}/>
         </Section>
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='Projekte aus meiner Selbstständigkeit'/>
+        </Section>
+        <Section backgroundColor='transparent' sectionSpace={10}>
+            <Headline h={2} small text='Kontakt'/>
         </Section>
         </Column>
     </StyledDiv>
@@ -128,7 +154,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       // Wenn das Passwort-Cookie gesetzt ist, leite den Benutzer zur geschützten Seite weiter
       return {
         redirect: {
-          destination: '/loginPortfolio',
+          destination: '/',
           permanent: false,
         },
       };
