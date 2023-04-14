@@ -128,7 +128,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Headline h={2} small text='Whitelabel'/>
             <Space height={5}/>
             <Text textAlign='center'>
-            Eines meiner frühen Projekte war die Realisierung einer White-Label-Lösung für AUDITcapital. Diese Lösung wurde für verschiedene Kunden entwickelt, die jeweils über ihre eigene Domain verfügen. Die White-Label-Lösung basiert auf WordPress, jedoch ohne vorgefertigtes Template, sondern wurde komplett neu programmiert, basierend auf einer Designvorlage. Die Webseite ist vollständig responsiv und wurde mit Hilfe des Divi-Pagebuilders erstellt.            </Text>
+            Eines meiner frühen Projekte war die Realisierung einer Whitelabel-Lösung für AUDITcapital. Diese Lösung wurde für verschiedene Kunden entwickelt, die jeweils über ihre eigene Domain verfügen. Die Whitelabel-Lösung basiert auf WordPress, jedoch ohne vorgefertigtes Template, sondern wurde komplett neu programmiert, basierend auf einer Designvorlage. Die Webseite ist vollständig responsiv und wurde mit Hilfe des Divi-Pagebuilders erstellt.            </Text>
             <Space height={5}/>
             <Headline h={3} small text='Verwendete Tools'/>
             <InvestedProjects projects={['Divi','Wordpress','JavaScript','Cleverreach', 'HTML', 'CSS']} blue/>
