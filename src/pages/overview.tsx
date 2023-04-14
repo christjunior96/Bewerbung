@@ -50,6 +50,7 @@ const unterlagen = [
   {"text":"Lebenslauf","url":"/Lebenslauf.pdf","image":"/tobedeleted/lebenslauf.png"},
   {"text":"Zertifikat Flutter","url":"/Zertifikat-Flutter.pdf","image":"/tobedeleted/flutter.png"},
   {"text":"Zertifikat Websecurity","url":"/Zertifikat-Websecurity.pdf","image":"/tobedeleted/security.png"},
+  {"text":"Zertifikat SAP","url":"/Zertifikat-SAP.pdf","image":"/tobedeleted/sap.png"},
 ]
 
 
