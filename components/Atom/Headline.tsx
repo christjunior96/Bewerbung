@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import { Roboto_Slab } from '@next/font/google'
 import { Nunito_Sans } from '@next/font/google'
+import ResponsiveImage from "./ResponsiveImage";
 
 const interbold = Roboto_Slab({weight:["200","300","400","500","600","700","800","900"], subsets: ['latin'] })
 const interregular = Roboto_Slab({weight:"400", subsets: ['latin'] })
@@ -80,7 +81,7 @@ const DisplayLogo = styled.div`
 const Headline = ({ h, small, text, color, regular, textAlign, underline, nunito, logo }: HeadlineProps) => {
   return (
     <HeadlineWrapper theme={{u:underline}}>
-      {logo && <DisplayLogo><img src="/icons/public/logo.svg" alt="ecozins Logo" /></DisplayLogo>}
+      {logo && <DisplayLogo><ResponsiveImage src="/icons/public/logo.svg" alt="ecozins Logo" /></DisplayLogo>}
       {h == 1 ? <H1 className={ regular ? interregular.className : nunito ? nunitoF.className : interbold.className} theme={{ small: small, c:color, t:textAlign, ff:nunito }}>{text}</H1> : h == 2 ? <H2 className={ regular ? interregular.className : nunito ? nunitoF.className : interbold.className} theme={{ small: small, c:color, t:textAlign, ff:nunito }}>{text}</H2> : h == 3 ? <H3 className={ regular ? interregular.className : nunito ? nunitoF.className : interbold.className} theme={{ small: small, c:color, t:textAlign, ff:nunito }}>{text}</H3> : h == 4 ? <H4 className={ regular ? interregular.className : nunito ? nunitoF.className : interbold.className} theme={{ small: small, c:color, t:textAlign, ff:nunito }}>{text}</H4> : h == 5 ? <H5 className={ regular ? interregular.className : nunito ? nunitoF.className : interbold.className} theme={{ small: small, c:color, t:textAlign, ff:nunito }}>{text}</H5> : h == 6 ? <H6 className={ regular ? interregular.className : nunito ? nunitoF.className : interbold.className} theme={{ small: small, c:color, t:textAlign, ff:nunito }}>{text}</H6> : <H1 className={ regular ? interregular.className : nunito ? nunitoF.className : interbold.className} theme={{ small: small, c:color, t:textAlign, ff:nunito }}>{text}</H1>}
     </HeadlineWrapper>
   );

@@ -79,7 +79,7 @@ const PostboxOverview = ({ nachrichten }: NachrichtenListe) => {
         <>
             <Column>
                 {nachrichten.map((message,index) => {return (
-                    <MessageWrapper href={"/account/message/1"}>
+                    <MessageWrapper href={"/account/message/1"}  key={`Message-${index}`}>
                         <MessageItem theme={{sec:index%2==0}} className={nunito.className}>
                             <Row rowSpace={4} justifyContent="space-between" alignItems="center">
                                 <div>

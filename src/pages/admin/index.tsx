@@ -91,10 +91,10 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
                   </thead>
                   <tbody>
 
-                  {props.res.map((page: any) => {
+                  {props.res.map((page: any, index: number) => {
                     const date = new Date(page.published_at);
                     return (
-                        <tr>
+                        <tr key={`TableRow-${index}`}>
                           <Td><ActiveIndicator theme={{active: date.getTime() < Date.now()}}/></Td>
                           <Td><Link href={"/project/"+page.link}>{page.title}</Link></Td>
                           <Td>{date.getTime() > Date.now() ? page.password : 'Öffentlich'}</Td>
@@ -122,10 +122,10 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
                   </thead>
                   <tbody>
 
-                  {props.blog.map((page: any) => {
+                  {props.blog.map((page: any, index:number) => {
                     const date = new Date(page.published_at);
                     return (
-                        <tr>
+                        <tr  key={`Tablerow-${index}`}>
                           <Td><ActiveIndicator theme={{active: date.getTime() < Date.now()}}/></Td>
                           <Td><Link href={"/blog/"+page.link}>{page.title}</Link></Td>
                           <Td>{page.type}</Td>

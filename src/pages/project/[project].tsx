@@ -41,21 +41,18 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
             <Section>
                 <Column columnSpace={5}>
                     
-                    {!props.pw || checkedPW ? props.comp.map((comp: any) =>{
+                    {!props.pw || checkedPW ? props.comp.map((comp: any, index:number) =>{
                         if(comp.type == "Headline"){
-                            return <Headline h={comp.headlineType} text={comp.text}/>
+                            return <Headline h={comp.headlineType}  key={`Item-${index}`} text={comp.text}/>
                         }
                         else if(comp.type == "Image"){
-                            return <ResponsiveImage src={comp.url} alt={comp.text} width='100%'/>
+                            return <ResponsiveImage src={comp.url} key={`Item-${index}`} alt={comp.text} width='100%'/>
                         }
                         else if(comp.type == "Button"){
-                            return <Button text={comp.text} href={comp.url}/>
+                            return <Button text={comp.text} key={`Item-${index}`} href={comp.url}/>
                         }
                         else if(comp.type == "Text"){
-                            return <Text>{parse(comp.text)}</Text>
-                        }
-                        else{
-                            return "Fehler"
+                            return <Text key={`Item-${index}`}>{parse(comp.text)}</Text>
                         }
                     }) : 
                         <Column alignItems='center' columnSpace={5}>
@@ -73,84 +70,8 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
     }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-
-    const projectLink = context.params?.project;
-    const link = projectLink ? projectLink : 'Hallo'
-    var pw = false;
-
-    const page = await prisma.page.findUnique({
-        where:{
-            link: link.toString(),
-        },
-    })
-
-    if (page == null){
-        return {
-            redirect: {
-              permanent: false,
-              destination: "/",
-            },
-          };
-    }
-
-    if (page.type != 'Project'){
-        return {
-            redirect: {
-              permanent: false,
-              destination: "/",
-            },
-          };
-    }
-
-    const date = page?.published_at?.getTime() ? page?.published_at?.getTime() : 0;
-
-    //Prüfen ob Admin oder ob ein passwort gesetzt werden muss
-
-    if(date > Date.now()){
-        pw = true;
-        interface JwtPayload {
-            role: string;
-        }
-    
-        // Holt sich die Cookies aus dem request
-        var authCookie = context.req.cookies.auth || null;
-        let decodedId;
-        let role;
-        let userData;
-    
-        console.log("authCookie :: " + authCookie);
-        // Überprüfung ob Cookie gültig ist
-        verify(authCookie ? authCookie : 'leer', process.env.JWT_SECRET, async function (err, decoded) {
-        if (!err && decoded) {
-            decodedId = decoded.sub;
-            role = decoded as JwtPayload;
-            role = role.role
-            console.log("decodedId " + decodedId);
-            console.log("role: " + role);
-        } else {
-            console.log("keine authentifizierung vorhanden");
-        }
-        });
-    
-        if (role == 0) {
-            console.log("Admin, grant access")
-            pw = false;
-        }
-    }
-
-    const components = await prisma.component.findMany({
-        where:{
-            pageId: page?.id
-        },
-        orderBy:{
-            order: 'asc'
-        }
-    })
-
         
       return { props: {
-        page : JSON.parse(JSON.stringify(page)),
-        comp : JSON.parse(JSON.stringify(components)),
-        pw: pw,
+        
       } };
 }

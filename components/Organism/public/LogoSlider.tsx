@@ -144,9 +144,9 @@ const LogoSlider = () => {
                     },
                 }}
                 >
-                {logos.map((item) => {
+                {logos.map((item, index) => {
                     return (
-                        <SwiperSlide>
+                        <SwiperSlide  key={`logoSlide-${index}`}>
                             <ResponsiveImage alt="Logo" height="40px" src={item.image}/>
                         </SwiperSlide>
                     )

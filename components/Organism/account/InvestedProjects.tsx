@@ -32,9 +32,9 @@ const ActiveCapital = ({ projects }: InvestedCapitalProps) => {
         <>
             <AccountHeadline text="Investierte Projekte"/>
             <ProjectItemWrapper>
-                {projects.map((project) => {
+                {projects.map((project, index) => {
                     return (
-                        <Projectitem>
+                        <Projectitem key={`InvestedProjekt-${index}`}>
                             {project}
                         </Projectitem>
                     )

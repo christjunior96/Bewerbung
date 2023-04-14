@@ -98,7 +98,7 @@ return (
                 <Headline>{data.category}</Headline>
                 <Indicator>{data.MenuId == oId ? <Image width={25} height={25} alt='Open Icon' src='/icons/public/faqm.svg' /> :  <Image width={25} height={25} alt='Open Icon' src='/icons/public/faqp.svg' />}</Indicator>
             </Question>
-            {data.MenuId == oId && <Answer>{data.body.map((link) => {return <CustomLink href={link[1]}>{link[0]}</CustomLink>}  
+            {data.MenuId == oId && <Answer>{data.body.map((link, index) => {return <CustomLink  key={`MenuItem-${index}`}href={link[1]}>{link[0]}</CustomLink>}  
             )}
             <Row alignItems="center">
             <CustomLinkUnderline href={data.lastLink}>alle anzeigen</CustomLinkUnderline>
