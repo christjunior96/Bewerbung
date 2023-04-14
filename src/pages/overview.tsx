@@ -104,7 +104,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Space height={5}/>
             <Text textAlign='center'>
             Dies ist das letzte Projekt, an dem ich gearbeitet habe. Leider wurde dieses Projekt nie abgeschlossen, dennoch hätte es mein bisher größtes Vorhaben werden können. Daher möchte ich hier präsentieren, was bis zu diesem Zeitpunkt entstanden ist. Anstatt ein konventionelles CMS zu nutzen, wurde ein eigenes CMS mit NextJS entwickelt, um die Themen und Projektseiten zu verwalten.
-
+            <br/><br/>
             <strong>Hinweis:</strong> Das Kundenkonto ist vollständig klickbar!            
             </Text>
             <Space height={7}/>
