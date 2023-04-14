@@ -30,7 +30,7 @@ const neueEcozins = [
 
 const whitelabel = [
   {"text":"Rotary","url":"https://giessen-spendet.de","image":"/tobedeleted/rotary.png"},
-  {"text":"reon","url":"https://reon-invest.com","image":"/tobedeleted/reon.png"},
+  {"text":"Reon","url":"https://reon-invest.com","image":"/tobedeleted/reon.png"},
   {"text":"GP Joule","url":"https://gpjoule-investcrowd.de","image":"/tobedeleted/gp.png"},
   {"text":"ENERPARC","url":"https://invest.enerparc.de","image":"/tobedeleted/enerparc.png"},
 ]
