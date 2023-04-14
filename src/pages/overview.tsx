@@ -47,7 +47,7 @@ const ez = [
 ]
 
 const unterlagen = [
-  {"text":"Lebenslauf","url":"/lebenslauf.pdf","image":"/tobedeleted/lebenslauf.png"},
+  {"text":"Lebenslauf","url":"/Lebenslauf.pdf","image":"/tobedeleted/lebenslauf.png"},
   {"text":"Zertifikat Flutter","url":"/Zertifikat-Flutter.pdf","image":"/tobedeleted/flutter.png"},
   {"text":"Zertifikat Websecurity","url":"/Zertifikat-Websecurity.pdf","image":"/tobedeleted/security.png"},
 ]
