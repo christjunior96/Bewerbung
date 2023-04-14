@@ -35,25 +35,28 @@ const whitelabel = [
   {"text":"ENERPARC","url":"https://invest.enerparc.de","image":"/tobedeleted/enerparc.png"},
 ]
 
+const selbstst = [
+  {"text":"Metzgerei Christ","url":"https://lieblingsmetzgerei.de","image":"/tobedeleted/metzgerei.png"},
+  {"text":"somack","url":"https://www.somack.de","image":"/tobedeleted/somack.png"},
+  {"text":"Elektrobau Römer","url":"https://www.elektrobau-roemer.de","image":"/tobedeleted/romer.png"},
+]
+
+const ez = [
+  {"text":"ecozins","url":"https://www.ecozins.de","image":"/tobedeleted/public.png"},
+  {"text":"Newsletter","url":"/template.html","image":"/tobedeleted/template.png"},
+]
+
+const unterlagen = [
+  {"text":"Lebenslauf","url":"/lebenslauf.pdf","image":"/tobedeleted/lebenslauf.png"},
+  {"text":"Zertifikat Flutter","url":"/Zertifikat-Flutter.pdf","image":"/tobedeleted/flutter.png"},
+  {"text":"Zertifikat Websecurity","url":"/Zertifikat-Websecurity.pdf","image":"/tobedeleted/security.png"},
+]
+
 
 const StyledDiv = styled.div`
     width: 100%;
     background: var(--MALDIVES_INTENSE2);
     display: flex;
-`;
-
-const StyledLink = styled(Link)`
-    font-size: 16px;
-    text-align: center;
-    color: var(--GOBLIN);
-    border: 2px solid var(--BUTTON_BORDER2);
-    white-space: nowrap;
-    padding: '12px 24px';
-    background: var(--VENICE_MINT2);
-    cursor: pointer;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-family: ${interSub};
 `;
 
 
@@ -107,18 +110,13 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Headline h={2} small text='ecozins Website'/>
             <Space height={5}/>
             <Text textAlign='center'>
-            Während meiner Zeit bei der AUDITcapital habe ich die ecozins Website weiterentwickelt. Dazu gehörte das Gestalten und Umsetzen von neuen Seiten, sowie das Erstellen von neuen Funktionen. Die Website wurde mit Wordpress erstellt und ist vollständig responsive. Außerdem habe ich Newsletter-Templates für Cleverreach erstellt.
+            Während meiner Zeit bei der AUDITcapital habe ich die ecozins Website weiterentwickelt. Dazu gehörte das Gestalten und Umsetzen von neuen Seiten, sowie das Erstellen von neuen Funktionen. Die Website wurde mit Wordpress erstellt und ist vollständig responsive. Außerdem habe ich <Link href={'/template.html'}>Newsletter-Templates</Link> für Cleverreach erstellt.
             </Text>
             <Space height={5}/>
             <Headline h={3} small text='Verwendete Tools'/>
             <InvestedProjects projects={['Wordpress','JavaScript','Cleverreach', 'HTML', 'CSS']} blue/>
             <Space height={5}/>
-            <Row sizeEvenly alignItems='center' justifyContent='center' distanceMobile={5} breakMobilePx={820}>
-                <Column alignItems='center' columnSpace={4}>
-                <ResponsiveImage alt={'FAQ'} src={'/tobedeleted/public.png'} width="250px" height="180px" borderRadius="2em" />
-                <StyledLink className={interSub.className} href={'https://www.ecozins.de'}>ecozins</StyledLink>
-                </Column>
-            </Row>
+            <PageSlider items={ez}/>
         </Section>
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='Whitelabel'/>
@@ -134,9 +132,32 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
         </Section>
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='Projekte aus meiner Selbstständigkeit'/>
+            <Space height={5}/>
+            <Text textAlign='center'>
+            Während meines Studium hatte ich ein Kleingewerbe als Webdesigner und habe verschiedene Projekte für Kunden umgesetzt. Diese Projekte sind alle mit Wordpress erstellt worden, teilweise mit Divi als Eigenentwicklung, teilweise mit einem Template.
+            </Text>
+            <Space height={5}/>
+            <Headline h={3} small text='Verwendete Tools'/>
+            <InvestedProjects projects={['Divi','Wordpress','HTML', 'CSS']} blue/>
+            <Space height={5}/>
+            <PageSlider items={selbstst}/>
+        </Section>
+        <Section backgroundColor='transparent' sectionSpace={10}>
+            <Headline h={2} small text='Unterlagen'/>
+            <Space height={5}/>
+            <PageSlider items={unterlagen}/>
         </Section>
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='Kontakt'/>
+            <Space height={5}/>
+            <Column>
+              <Row justifyContent='center'>
+                <Text><strong>Tel:</strong> +49 (0) 173 940 940 4</Text>
+              </Row>
+              <Row justifyContent='center'>
+                <Text><strong>E-Mail:</strong> <Link href={'mailto:l.christ.bewerbung@gmail.com'}>l.christ.bewerbung@gmail.com</Link></Text>
+              </Row>
+            </Column>
         </Section>
         </Column>
     </StyledDiv>
