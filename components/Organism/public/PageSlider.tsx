@@ -41,7 +41,7 @@ const SliderContainer = styled.div`
     mix-blend-mode: normal;
     > .swiper{
         width: 100%;
-        height: 240px;
+        height: 250px;
     }
 `;
 
@@ -107,8 +107,8 @@ const PageSlider = ({ items }: PageListe) => {
                 {items.map((item, index) => {
                     return (
                         <SwiperSlide key={`PageSlide-${index}`}>
-                            <Column alignItems='center' columnSpace={4}>
-                            <ResponsiveImage alt={'FAQ'} src={item.image} width="250px" height="180px" borderRadius="2em" />
+                            <Column alignItems='center' columnSpace={7}>
+                            <ResponsiveImage alt={'FAQ'} src={item.image} width="250px" height="180px" objectFit="cover" borderRadius="2em" />
                             <StyledLink className={nunito.className} href={item.url}>{item.text}</StyledLink>
                             </Column>
                         </SwiperSlide>
