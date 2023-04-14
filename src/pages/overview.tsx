@@ -103,7 +103,9 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Headline h={2} small text='ecozins Relaunch'/>
             <Space height={5}/>
             <Text textAlign='center'>
-            Dies ist das letzte Projekt, an dem ich gearbeitet habe. Leider wurde dieses Projekt nie zu Ende gebracht, dennoch wäre es mein bisher größtes Projekt geworden, daher möchte ich hier zeigen, was bis dahin entstanden ist. Das Projekt wurde ohne ein konventionelles CMS erstellt, stattdessen wurde ein eigenes CMS mit NextJS entwickelt, um die Themen und Projektseiten zu pflegen.<br/><br/> <strong>Hinweis:</strong> Kundenkonto ist vollständig klickbar!
+            Dies ist das letzte Projekt, an dem ich gearbeitet habe. Leider wurde dieses Projekt nie abgeschlossen, dennoch hätte es mein bisher größtes Vorhaben werden können. Daher möchte ich hier präsentieren, was bis zu diesem Zeitpunkt entstanden ist. Anstatt ein konventionelles CMS zu nutzen, wurde ein eigenes CMS mit NextJS entwickelt, um die Themen und Projektseiten zu verwalten.
+
+            <strong>Hinweis:</strong> Das Kundenkonto ist vollständig klickbar!            
             </Text>
             <Space height={7}/>
             <Headline h={3} small text='Verwendete Tools'/>
@@ -114,7 +116,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Headline h={2} small text='ecozins Website'/>
             <Space height={5}/>
             <Text textAlign='center'>
-            Während meiner Zeit bei der AUDITcapital habe ich die ecozins Website weiterentwickelt. Dazu gehörte das Gestalten und Umsetzen von neuen Seiten, sowie das Erstellen von neuen Funktionen. Die Website wurde mit Wordpress erstellt und ist vollständig responsive. Außerdem habe ich <Link href={'/template.html'}>Newsletter-Templates</Link> für Cleverreach erstellt.
+              Während meiner Tätigkeit bei der AUDITcapital war ich für die kontinuierliche Weiterentwicklung der ecozins-Website verantwortlich. Dies umfasste das Design und die Implementierung neuer Seiten sowie die Schaffung zusätzlicher Funktionen. Die Website wurde unter Verwendung von WordPress erstellt und ist vollständig responsiv gestaltet. Darüber hinaus habe ich <Link href={'/template.html'}>Newsletter-Templates</Link> für Cleverreach entwickelt.
             </Text>
             <Space height={5}/>
             <Headline h={3} small text='Verwendete Tools'/>
@@ -126,8 +128,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Headline h={2} small text='Whitelabel'/>
             <Space height={5}/>
             <Text textAlign='center'>
-            Eines meiner ersten Projekte war die Umsetzung einer Whitelabel-Lösung für die AUDITcapital. Diese Whitelabel-Lösung wurde für verschiedene Kunden erstellt, die alle ihre eigene Domain besitzen. Die Whitelabel-Lösung wurde mit Wordpress erstellt, jedoch ohne Template, sie ist von Grund auf neu programmiert nach einer Designvorlage. Die Website ist vollständig responsive und wurde mit dem Divi-Pagebuilder erstellt.
-            </Text>
+            Eines meiner frühen Projekte war die Realisierung einer White-Label-Lösung für AUDITcapital. Diese Lösung wurde für verschiedene Kunden entwickelt, die jeweils über ihre eigene Domain verfügen. Die White-Label-Lösung basiert auf WordPress, jedoch ohne vorgefertigtes Template, sondern wurde komplett neu programmiert, basierend auf einer Designvorlage. Die Webseite ist vollständig responsiv und wurde mit Hilfe des Divi-Pagebuilders erstellt.            </Text>
             <Space height={5}/>
             <Headline h={3} small text='Verwendete Tools'/>
             <InvestedProjects projects={['Divi','Wordpress','JavaScript','Cleverreach', 'HTML', 'CSS']} blue/>
@@ -138,7 +139,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Headline h={2} small text='Projekte aus meiner Selbstständigkeit'/>
             <Space height={5}/>
             <Text textAlign='center'>
-            Während meines Studiums habe ich ein Kleingewerbe eröffnet und verschiedene Webdesign-Projekte für Kunden umgesetzt. Diese Projekte sind alle mit Wordpress erstellt worden, teilweise mit Divi als Eigenentwicklung, teilweise mit einem Template.
+            Während meines Studiums gründete ich ein Kleingewerbe und führte verschiedene Webdesign-Projekte für Kunden durch. Diese Projekte wurden alle mit WordPress realisiert, wobei teilweise Divi für individuelle Entwicklungen und teilweise vorgefertigte Templates verwendet wurden.
             </Text>
             <Space height={5}/>
             <Headline h={3} small text='Verwendete Tools'/>
