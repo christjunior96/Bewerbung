@@ -219,7 +219,7 @@ return (
                 <MobileMenuItem key={"dn24nd5"}><Link href="/account/freistellungsauftrag/">Freistellungsaufträge</Link></MobileMenuItem>
                 <MobileMenuItem key={"dn24nd6"}><Link href="/account/persoenliche-daten/">Persönliche Daten</Link></MobileMenuItem>
                 <MobileMenuItem key={"dn24nd7"}><Link href="/account/gutscheine/">Gutscheine &amp; Aktionen</Link></MobileMenuItem>
-                <MobileMenuItem key={"dn24nd8"}><Link href="/account/kontoeinstellungen/">Einstellungen</Link></MobileMenuItem>
+                <MobileMenuItem key={"dn24nd8"}><Link href="/account/einstellungen">Einstellungen</Link></MobileMenuItem>
             </ul>
         </MobileMenuWrapper>
         <DivLeft>
