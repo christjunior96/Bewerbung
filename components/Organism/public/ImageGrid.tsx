@@ -122,7 +122,7 @@ const ImageGrid = () => {
                             <ResponsiveImage objectFit="cover" sizes="750px" height="100%" alt="Kenan beim bedrucken eines T-Shirts" width="100%" src="/tobedeleted/louis3.JPG"/>
                         </Row>
                         <Row sizeEvenly alignItems="center">
-                            <ResponsiveImage alt="Kenan beim bedrucken eines T-Shirts" height="100%" sizes="750px" width="100%" src="/dates/ez.JPG"/>
+                            <ResponsiveImage alt="Kenan beim bedrucken eines T-Shirts" height="100%" sizes="750px" width="100%" src="/dates/ez.jpg"/>
                             <TextBox className={nunito.className}></TextBox>
                         </Row>
                     </Column>
