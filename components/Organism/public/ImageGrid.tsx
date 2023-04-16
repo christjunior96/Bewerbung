@@ -53,7 +53,7 @@ const ImageGrid = () => {
                 <Row sizeEvenly breakMobilePx={700}>
                     <ResponsiveImage  objectFit="cover" height="100%" alt="Kenan beim bedrucken eines T-Shirts" width="100%" src="/tobedeleted/louis1.JPG"/>
                     <Column>
-                        <Row>
+                        <Row sizeEvenly>
                             <ResponsiveImage  objectFit="cover"  height="100%" alt="Kenan beim bedrucken eines T-Shirts" width="100%" src="/tobedeleted/louis2.JPG"/>
                             <ResponsiveImage  objectFit="cover"  alt="Kenan beim bedrucken eines T-Shirts" width="100%" src="/tobedeleted/louis3.JPG"/>
                         </Row>
@@ -69,7 +69,7 @@ const ImageGrid = () => {
                 </Row>
                 <Row sizeEvenly breakMobilePx={700}>
                     <Column>
-                        <Row>
+                        <Row sizeEvenly>
                             <ResponsiveImage objectFit="cover" height="100%" alt="Kenan beim bedrucken eines T-Shirts" width="100%" src="/tobedeleted/louis2.JPG"/>
                             <ResponsiveImage objectFit="cover" alt="Kenan beim bedrucken eines T-Shirts" width="100%" height="100%" src="/tobedeleted/louis3.JPG"/>
                         </Row>
@@ -87,7 +87,7 @@ const ImageGrid = () => {
                 <Row sizeEvenly breakMobilePx={700}>
                     <ResponsiveImage objectFit="cover" alt="Kenan beim bedrucken eines T-Shirts" height="100%" width="100%" src="/tobedeleted/louis1.JPG"/>
                     <Column>
-                        <Row>
+                        <Row sizeEvenly>
                             <ResponsiveImage objectFit="cover" alt="Kenan beim bedrucken eines T-Shirts" height="100%"  width="100%" src="/tobedeleted/louis2.JPG"/>
                             <ResponsiveImage objectFit="cover" alt="Kenan beim bedrucken eines T-Shirts" height="100%"  width="100%" src="/tobedeleted/louis3.JPG"/>
                         </Row>
@@ -117,7 +117,7 @@ const ImageGrid = () => {
                         </Row>
                     </Column>
                     <Column>
-                        <Row>
+                        <Row sizeEvenly>
                             <ResponsiveImage objectFit="cover" sizes="750px" height="100%" alt="Kenan beim bedrucken eines T-Shirts" width="100%" src="/tobedeleted/louis2.JPG"/>
                             <ResponsiveImage objectFit="cover" sizes="750px" height="100%" alt="Kenan beim bedrucken eines T-Shirts" width="100%" src="/tobedeleted/louis3.JPG"/>
                         </Row>
