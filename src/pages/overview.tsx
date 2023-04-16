@@ -120,7 +120,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             </Text>
             <Space height={5}/>
             <Headline h={3} small text='Verwendete Tools'/>
-            <InvestedProjects projects={['Wordpress','JavaScript','Cleverreach', 'HTML', 'CSS', 'Photoshop']} blue/>
+            <InvestedProjects projects={['WordPress','JavaScript','Cleverreach', 'HTML', 'CSS', 'Photoshop']} blue/>
             <Space height={5}/>
             <PageSlider items={ez}/>
         </Section>
@@ -131,7 +131,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             Eines meiner frühen Projekte war die Realisierung einer Whitelabel-Lösung für AUDITcapital. Diese Lösung wurde für verschiedene Kunden entwickelt, die jeweils über ihre eigene Domain verfügen. Die Whitelabel-Lösung basiert auf WordPress, jedoch ohne vorgefertigtes Template, sondern wurde komplett neu programmiert, basierend auf einer Designvorlage. Die Webseiten sind vollständig responsiv und wurde mit Hilfe des Divi-Pagebuilders erstellt.            </Text>
             <Space height={5}/>
             <Headline h={3} small text='Verwendete Tools'/>
-            <InvestedProjects projects={['Divi','Wordpress','JavaScript','Cleverreach', 'HTML', 'CSS']} blue/>
+            <InvestedProjects projects={['Divi','WordPress','JavaScript','Cleverreach', 'HTML', 'CSS']} blue/>
             <Space height={5}/>
             <PageSlider items={whitelabel}/>
         </Section>
@@ -143,7 +143,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             </Text>
             <Space height={5}/>
             <Headline h={3} small text='Verwendete Tools'/>
-            <InvestedProjects projects={['Divi','Wordpress','HTML', 'CSS']} blue/>
+            <InvestedProjects projects={['Divi','WordPress','HTML', 'CSS']} blue/>
             <Space height={5}/>
             <PageSlider items={selbstst}/>
         </Section>
