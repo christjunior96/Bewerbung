@@ -85,12 +85,23 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
     router.push('/overview');
   };
 
+  const transition = {
+    type: "spring",
+    stiffness: 260,
+    damping: 20,
+  };
+
   return (
     <StyledDiv>
         <Column>
         <Space height={10}/>
         <Row justifyContent='center'>
+        <motion.div
+        whileTap={{scale: 0.9, rotate: 10}}
+        whileHover={{ scale: 1.1 }}
+        transition={transition}>
         <ResponsiveImage alt='Louis Christ' src='/tobedeleted/LouisMain.jpg' width='150px' borderRadius='999px'/>
+        </motion.div>
         </Row>
         <Space height={3}/>
         <AnimatedHeadline text='Herzlich willkommen!'/>
