@@ -16,6 +16,7 @@ import 'react-quill/dist/quill.snow.css'
 import dynamic from 'next/dynamic'
 import parse from 'html-react-parser';
 import LogoSlider from 'components/Organism/public/LogoSlider'
+import AnimatedHeadline from 'components/Atom/AnimatedHeadline'
 
 
 export default function Home(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
@@ -112,6 +113,10 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
 
         <Section>
           <LogoSlider/>
+        </Section>
+
+        <Section>
+          <AnimatedHeadline text='Hallo Welt'/>
         </Section>
         
       </main>

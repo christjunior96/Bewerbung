@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from 'styled-components';
 import React from "react";
 import { Roboto_Slab } from '@next/font/google'
 import { Nunito_Sans } from '@next/font/google'
@@ -18,7 +18,52 @@ interface HeadlineProps {
   underline?: boolean;
   nunito?: boolean;
   logo?: boolean;
+  rubberBand?: boolean;
 }
+
+const rubberBandAnimation = keyframes`
+  from {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  30% {
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+
+  40% {
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+
+  50% {
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+
+  65% {
+    transform: scaleX(0.95) scaleY(1.05);
+  }
+
+  75% {
+    transform: scaleX(1.05) scaleY(0.95);
+  }
+
+  to {
+    transform: scaleX(1) scaleY(1);
+  }
+`;
+
+const colorAnimation = keyframes`
+  0% {
+    color: inherit;
+  }
+
+  50% {
+    color: blue;
+  }
+
+  100% {
+    color: inherit;
+  }
+`;
 
 const H1 = styled.h1`
     color: var(${props => props.theme.c ? props.theme.c : '--BLACK'});
@@ -78,7 +123,7 @@ const DisplayLogo = styled.div`
     }
     `;
 
-const Headline = ({ h, small, text, color, regular, textAlign, underline, nunito, logo }: HeadlineProps) => {
+const Headline = ({ h, small, text, color, regular, textAlign, underline, nunito, logo, rubberBand }: HeadlineProps) => {
   return (
     <HeadlineWrapper theme={{u:underline}}>
       {logo && <DisplayLogo><ResponsiveImage src="/icons/public/logo.svg" alt="ecozins Logo" /></DisplayLogo>}

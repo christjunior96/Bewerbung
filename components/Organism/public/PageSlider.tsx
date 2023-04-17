@@ -61,7 +61,15 @@ const StyledLink = styled(Link)`
     font-family: ${nunito};
 `;
 
+const StyledResponsiveImage = styled(ResponsiveImage)`
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+`;
 
 const PageSlider = ({ items }: PageListe) => {
 
@@ -108,7 +116,15 @@ const PageSlider = ({ items }: PageListe) => {
                     return (
                         <SwiperSlide key={`PageSlide-${index}`}>
                             <Column alignItems='center' columnSpace={7}>
-                            <ResponsiveImage alt={'FAQ'} src={item.image} width="250px" height="180px" objectFit="cover" borderRadius="2em" />
+                            <StyledResponsiveImage
+                                effect
+                                alt={"FAQ"}
+                                src={item.image}
+                                width="250px"
+                                height="180px"
+                                objectFit="cover"
+                                borderRadius="2em"
+                                />                            
                             <StyledLink className={nunito.className} href={item.url}>{item.text}</StyledLink>
                             </Column>
                         </SwiperSlide>

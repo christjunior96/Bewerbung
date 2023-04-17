@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useRef } from "react";
+
 
 
 interface ImageProps {
@@ -37,15 +41,80 @@ const ImageWrapper = styled.div`
 `;
 
 
-const ResponsiveImage = ({ src, alt, width, height, borderRadius, maxWidth, maxHeight, objectFit,sizes, priority, blendMode,opacity }: ImageProps) => {
+
+
+interface ImagePropsWithEffect extends ImageProps {
+    effect?: boolean;
+  }
+  
+  const ResponsiveImage = ({
+    src,
+    alt,
+    width,
+    height,
+    borderRadius,
+    maxWidth,
+    maxHeight,
+    objectFit,
+    sizes,
+    priority,
+    blendMode,
+    opacity,
+    effect,
+  }: ImagePropsWithEffect) => {
     priority = priority ? priority : false;
-
-return (
-    <ImageWrapper theme={{w:width, h:height, mW:maxWidth, mH:maxHeight, bM:blendMode, op:opacity , br:borderRadius, oF:objectFit }}>
-        <Image sizes={sizes} alt={alt} priority={priority} fill src={src}/>
-    </ImageWrapper>
-    
-);
-};
-
-export default ResponsiveImage;
+  
+    const [ref, inView] = useInView({
+      triggerOnce: true,
+    });
+  
+    const animation = {
+      hidden: { scale: 0 },
+      visible: { rotate: 360, scale: 1 },
+    };
+  
+    const transition = {
+      type: "spring",
+      stiffness: 260,
+      damping: 20,
+    };
+  
+    const ImageComponent = (
+      <ImageWrapper
+        theme={{
+          w: width,
+          h: height,
+          mW: maxWidth,
+          mH: maxHeight,
+          bM: blendMode,
+          op: opacity,
+          br: borderRadius,
+          oF: objectFit,
+        }}
+      >
+        <Image
+          sizes={sizes}
+          alt={alt}
+          priority={priority}
+          fill
+          src={src}
+        />
+      </ImageWrapper>
+    );
+  
+    const MotionImageComponent = (
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        transition={transition}
+        variants={animation}
+      >
+        {ImageComponent}
+      </motion.div>
+    );
+  
+    return effect ? MotionImageComponent : ImageComponent;
+  };
+  
+  export default ResponsiveImage;

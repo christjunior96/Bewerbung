@@ -16,6 +16,7 @@ import Link from 'next/link';
 import { Nunito_Sans } from '@next/font/google'
 import PageSlider from 'components/Organism/public/PageSlider';
 import InvestedProjects from 'components/Organism/account/InvestedProjects';
+import AnimatedHeadline from 'components/Atom/AnimatedHeadline';
 
 const inter = Nunito_Sans({ subsets: ['latin'], weight:"600" })
 const interSub = Nunito_Sans({ subsets: ['latin'], weight:"300" })
@@ -88,7 +89,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
         <ResponsiveImage alt='Louis Christ' src='/tobedeleted/LouisMain.jpg' width='150px' borderRadius='999px'/>
         </Row>
         <Space height={3}/>
-        <Headline h={1} small text='Herzlich willkommen!'/>
+        <AnimatedHeadline text='Herzlich willkommen!'/>
         <Space height={5}/>
         <Section backgroundColor='transparent'>
             <Row alignItems='center' rowSpace={10} justifyContent='center' breakMobilePx={500} distanceMobile={5}>
