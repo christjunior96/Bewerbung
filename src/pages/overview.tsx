@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import cookie from 'cookie';
@@ -17,6 +17,10 @@ import { Nunito_Sans } from '@next/font/google'
 import PageSlider from 'components/Organism/public/PageSlider';
 import InvestedProjects from 'components/Organism/account/InvestedProjects';
 import AnimatedHeadline from 'components/Atom/AnimatedHeadline';
+import VisibilitySensor from "react-visibility-sensor";
+import { motion, useAnimation } from "framer-motion";
+
+
 
 const inter = Nunito_Sans({ subsets: ['latin'], weight:"600" })
 const interSub = Nunito_Sans({ subsets: ['latin'], weight:"300" })

@@ -8,6 +8,7 @@ import Link from "next/link";
 import ResponsiveImage from "components/Atom/ResponsiveImage"
 import Space from "components/Atom/Space";
 import { Navigation, Pagination, Scrollbar, A11y, Mousewheel, Autoplay, FreeMode } from 'swiper';
+import { motion } from "framer-motion";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -61,15 +62,6 @@ const StyledLink = styled(Link)`
     font-family: ${nunito};
 `;
 
-const StyledResponsiveImage = styled(ResponsiveImage)`
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-`;
 
 const PageSlider = ({ items }: PageListe) => {
 
@@ -116,7 +108,7 @@ const PageSlider = ({ items }: PageListe) => {
                     return (
                         <SwiperSlide key={`PageSlide-${index}`}>
                             <Column alignItems='center' columnSpace={7}>
-                            <StyledResponsiveImage
+                            <ResponsiveImage
                                 effect
                                 alt={"FAQ"}
                                 src={item.image}
@@ -124,8 +116,13 @@ const PageSlider = ({ items }: PageListe) => {
                                 height="180px"
                                 objectFit="cover"
                                 borderRadius="2em"
-                                />                            
-                            <StyledLink className={nunito.className} href={item.url}>{item.text}</StyledLink>
+                                />       
+                            <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 1 }}
+                            >
+                                <StyledLink className={nunito.className} href={item.url}>{item.text}</StyledLink>
+                            </motion.div>                     
                             </Column>
                         </SwiperSlide>
                     )

@@ -109,6 +109,8 @@ interface ImagePropsWithEffect extends ImageProps {
         animate={inView ? "visible" : "hidden"}
         transition={transition}
         variants={animation}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 1 }}
       >
         {ImageComponent}
       </motion.div>

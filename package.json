@@ -38,6 +38,8 @@
     "react-quill": "^2.0.0",
     "react-range": "^1.8.14",
     "react-range-slider-input": "^3.0.7",
+    "react-spring": "^9.7.1",
+    "react-visibility-sensor": "^5.1.1",
     "reading-time": "^1.5.0",
     "string-strip-html": "^13.2.1",
     "styled-components": "^5.3.6",
