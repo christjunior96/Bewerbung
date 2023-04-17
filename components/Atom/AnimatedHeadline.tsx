@@ -1,33 +1,14 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
 import { Roboto_Slab } from '@next/font/google'
 
 const interregular = Roboto_Slab({weight:"400", subsets: ['latin'] })
 const interbold = Roboto_Slab({weight:["200","300","400","500","600","700","800","900"], subsets: ['latin'] })
 
-const rubberBandAnimation = keyframes`
-  0% {
-    transform: translateY(0px) scale(1);
-  }
-
-  50% {
-    transform: translateY(-10px) scale(1.1);
-  }
-
-  100% {
-    transform: translateY(0px) scale(1);
-  }
-`;
-
-const StyledLetter = styled.span`
+const StyledLetter = styled(motion.span)`
   display: inline-block;
-  transition: transform 0.2s;
-  
   font-size: 39px;
-  &:hover {
-    animation: ${rubberBandAnimation} 0.5s;
-    animation-fill-mode: forwards;
-  }
 `;
 
 const StyledContent = styled.span`
@@ -36,18 +17,41 @@ const StyledContent = styled.span`
 `;
 
 const H1 = styled.h1`
-text-align: center;
-font-family: 'Roboto Slab';
+  text-align: center;
+  font-family: 'Roboto Slab';
 `;
 
 type AnimatedHeadlineProps = {
   text: string;
 };
 
+const rubberBandAnimation = {
+  initial: {
+    y: 0,
+    scaleY: 1,
+    scaleX:1
+  },
+  hover: {
+    y: -10,
+    scaleY: 1.1,
+    scaleX:1.2,
+    transition: {
+      duration: 0.25,
+      yoyo: Infinity
+    }
+  }
+};
+
 const AnimatedHeadline: React.FC<AnimatedHeadlineProps> = ({ text }) => {
   const letters = text.split('').map((letter, index) => (
-    <StyledLetter key={index}>
-      <StyledContent className={interbold.className}>{letter}</StyledContent>
+    <StyledLetter
+      key={index}
+      className={interbold.className}
+      initial="initial"
+      whileHover="hover"
+      variants={rubberBandAnimation}
+    >
+      <StyledContent>{letter}</StyledContent>
     </StyledLetter>
   ));
 
