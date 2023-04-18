@@ -69,21 +69,21 @@ const H1 = styled.h1`
     color: var(${props => props.theme.c ? props.theme.c : '--BLACK'});
     font-size: ${props => props.theme.small ? '39.8' : '47.8'}px;
     text-align: ${props => props.theme.t ? props.theme.t: 'center'};
-    font-family: ${props => props.theme.ff ? 'Nunito Sans' : "Roboto Slab"};
+    font-family: ${props => props.theme.ff ? 'Nunito Sans' : "Roboto Slab"}, sans-serif;
 `;
 
 const H2 = styled.h2`
     color: var(${props => props.theme.c ? props.theme.c : '--BLACK'});
     font-size: ${props => props.theme.small ? '33.2' : '39.8'}px;
     text-align: ${props => props.theme.t ? props.theme.t: 'center'};
-    font-family: ${props => props.theme.ff ? 'Nunito Sans' : "Roboto Slab"};
+    font-family: ${props => props.theme.ff ? 'Nunito Sans' : "Roboto Slab"}, sans-serif;
 `;
 
 const H3 = styled.h3`
     color: var(${props => props.theme.c ? props.theme.c : '--BLACK'});
     font-size: ${props => props.theme.small ? '27.6' : '33.2'}px;
     text-align: ${props => props.theme.t ? props.theme.t: 'center'};
-    font-family: ${props => props.theme.ff ? 'Nunito Sans' : "Roboto Slab"};
+    font-family: ${props => props.theme.ff ? 'Nunito Sans' : "Roboto Slab"}, sans-serif;
 `;
 
 const H4 = styled.h4`

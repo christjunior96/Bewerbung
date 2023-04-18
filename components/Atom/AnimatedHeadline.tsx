@@ -13,12 +13,12 @@ const StyledLetter = styled(motion.span)`
 
 const StyledContent = styled.span`
   white-space: pre-wrap;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', sans-serif;
 `;
 
 const H1 = styled.h1`
   text-align: center;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', sans-serif;
 `;
 
 type AnimatedHeadlineProps = {
