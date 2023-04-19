@@ -9,7 +9,7 @@ import Text from "components/Atom/Text";
 
 const NavWrapper = styled(motion.div)`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 80px;
@@ -20,6 +20,15 @@ const NavWrapper = styled(motion.div)`
   z-index: 1000;
   padding: 0 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+`;
+
+const ContengtWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 80px;
 `;
 
 const DAMobile = styled.div`
@@ -81,6 +90,8 @@ const Navbar: React.FC = () => {
           exit={{ y: -120 }}
           transition={{ duration: 0.3 }}
         >
+          <ContengtWrapper>
+
           <SBS>
             <motion.div
               whileTap={{ scale: 0.9, rotate: 10 }}
@@ -107,6 +118,8 @@ const Navbar: React.FC = () => {
               </Link></MenuItem>
             <MenuItem><Link href={'#Kontakt'}><Text>Kontakt</Text></Link></MenuItem>
           </Menu>
+          </ContengtWrapper>
+          
         </NavWrapper>
       )}
     </AnimatePresence>
