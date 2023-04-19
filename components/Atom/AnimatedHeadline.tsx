@@ -8,7 +8,7 @@ const interbold = Roboto_Slab({weight:["200","300","400","500","600","700","800"
 
 const StyledLetter = styled(motion.span)`
   display: inline-block;
-  font-size: 39px;
+  font-size: ${props => props.theme.s ? '28px' : '39px'};
 `;
 
 const StyledContent = styled.span`
@@ -23,6 +23,7 @@ const H1 = styled.h1`
 
 type AnimatedHeadlineProps = {
   text: string;
+  small?: boolean;
 };
 
 const rubberBandAnimation = {
@@ -42,7 +43,7 @@ const rubberBandAnimation = {
   }
 };
 
-const AnimatedHeadline: React.FC<AnimatedHeadlineProps> = ({ text }) => {
+const AnimatedHeadline: React.FC<AnimatedHeadlineProps> = ({ text, small }) => {
   const letters = text.split('').map((letter, index) => (
     <StyledLetter
       key={index}
@@ -50,6 +51,7 @@ const AnimatedHeadline: React.FC<AnimatedHeadlineProps> = ({ text }) => {
       initial="initial"
       whileHover="hover"
       variants={rubberBandAnimation}
+      theme={{s:small}}
     >
       <StyledContent>{letter}</StyledContent>
     </StyledLetter>

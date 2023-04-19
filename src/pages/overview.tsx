@@ -19,6 +19,7 @@ import InvestedProjects from 'components/Organism/account/InvestedProjects';
 import AnimatedHeadline from 'components/Atom/AnimatedHeadline';
 import VisibilitySensor from "react-visibility-sensor";
 import { motion, useAnimation } from "framer-motion";
+import Navbar from 'components/Organism/public/Navbar';
 
 
 
@@ -92,6 +93,8 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
   };
 
   return (
+    <>
+    <Navbar/>
     <StyledDiv>
         <Column>
         <Space height={10}/>
@@ -163,7 +166,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Space height={5}/>
             <PageSlider items={selbstst}/>
         </Section>
-        <Section backgroundColor='transparent' sectionSpace={10}>
+        <Section backgroundColor='transparent' id='Lebenslauf' sectionSpace={10}>
             <Headline h={2} small text='Lebenslauf'/>
             <Space height={5}/>
             <PageSlider items={lebenslauf}/>
@@ -173,7 +176,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Space height={5}/>
             <PageSlider items={unterlagen}/>
         </Section>
-        <Section backgroundColor='transparent' sectionSpace={10}>
+        <Section backgroundColor='transparent' id='Kontakt' sectionSpace={10}>
             <Headline h={2} small text='Kontakt'/>
             <Space height={5}/>
             <Column>
@@ -187,6 +190,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
         </Section>
         </Column>
     </StyledDiv>
+    </>
   );
 };
 
