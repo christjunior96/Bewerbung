@@ -8,7 +8,7 @@ const interbold = Roboto_Slab({weight:["200","300","400","500","600","700","800"
 
 const StyledLetter = styled(motion.span)`
   display: inline-block;
-  font-size: ${props => props.theme.s ? '28px' : '39px'};
+  font-size: ${props => props.theme.s ? '28px' : '38px'};
 `;
 
 const StyledContent = styled.span`
