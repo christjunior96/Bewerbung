@@ -107,7 +107,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
         </motion.div>
         </Row>
         <Space height={3}/>
-        <AnimatedHeadline text='Herzlich willkommen!'/>
+        <AnimatedHeadline text='Willkommen!'/>
         <Space height={5}/>
         <Section backgroundColor='transparent'>
             <Row alignItems='center' rowSpace={10} justifyContent='center' breakMobilePx={500} distanceMobile={5}>
