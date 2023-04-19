@@ -160,7 +160,7 @@ const TextButton = styled.button`
     `;
 
 const HeadingText = styled.div`
-    font-family: ${roboto};
+    font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 700;
     font-size: 19px;
@@ -177,7 +177,7 @@ const SupportButton = styled(Link)`
     justify-content: space-around;
     padding: 1em 1em;
     height: 69px;
-    font-family: ${roboto};
+    font-family: ${roboto},Arial;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -196,7 +196,7 @@ const SupportButton = styled(Link)`
 `;
 
 const CustomLink = styled(Link)`
-    font-family: 'Nunito';
+    font-family: 'Nunito', Arial;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
@@ -229,7 +229,7 @@ const Neu = styled.div`
     align-items: center;
     padding: 5px 10px;
     margin-left: 10px;
-    font-family: 'Nunito';
+    font-family: 'Nunito', Arial;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -269,7 +269,7 @@ const Box = styled(Link)`
 `;
 
 const BoxText = styled.div`
-    font-family: 'Nunito';
+    font-family: 'Nunito', Arial;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
