@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
             </motion.div>
             <Space width={5} />
             <DAMobile>
-              <AnimatedHeadline small text="Louis Christ" loop/>
+              <AnimatedHeadline small text="Louis Christ"/>
             </DAMobile>
           </SBS>
 

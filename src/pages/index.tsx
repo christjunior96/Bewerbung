@@ -11,6 +11,8 @@ import Space from 'components/Atom/Space';
 import StyledTextInput from 'components/Molecule/StyledTextInput';
 import ResponsiveImage from 'components/Atom/ResponsiveImage';
 import ScrollAnimation from 'components/Atom/ScrollAnimation';
+import AnimatedHeadline from 'components/Atom/AnimatedHeadline';
+import { motion } from 'framer-motion';
 
 const StyledDiv = styled.div`
     height: 100vh;
@@ -32,14 +34,32 @@ const StyledButton = styled.button`
     padding: 10px 20px;
 `;
 
+const fadeOutAnimation = {
+  exit: {
+    opacity: 0,
+    transition: { duration: 0.5 },
+  },
+};
+
+const shakeAnimation = {
+  initial: { x: 0 },
+  shake: {
+    x: [0, -10, 10, -10, 10, 0],
+    transition: { duration: 0.5 },
+  },
+};
 
 const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const [password, setPassword] = useState('');
+  const [fadeOut, setFadeOut] = useState(false);
+  const [shake, setShake] = useState(false);
   const router = useRouter();
 
   const onFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if(password == 'louis_bewerbung') {
+      setFadeOut(true);
      // Setze das Ablaufdatum auf 24 Stunden in die Zukunft
     const expires = new Date();
     expires.setTime(expires.getTime() + 24 * 60 * 60 * 1000);
@@ -47,29 +67,39 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
     document.cookie = `password=${password}; path=/; expires=${expires.toUTCString()}`;
 
     // Leite den Benutzer zur geschützten Seite weiter
-    router.push('/overview');
+    setTimeout(() => {
+      router.push('/overview');
+    }, 500);
+  } else {
+    setShake(true);
+    setTimeout(() => setShake(false), 500);
+  }
   };
 
   return (
     <StyledDiv>
-      
+      <Row justifyContent='center' alignItems='center'>
+        <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }} animate={fadeOut ? 'exit' : 'initial'} variants={fadeOutAnimation}>
         <Column justifyContent='center' alignItems='center'>
                 <ScrollAnimation>
                 <ResponsiveImage alt='Louis Christ' src='/tobedeleted/LouisMain.jpg' width='150px' borderRadius='999px'/>
                 </ScrollAnimation>
-                <ScrollAnimation> <Headline h={1} text='Portfolio' /></ScrollAnimation>
+                <ScrollAnimation> <AnimatedHeadline text='Portfolio' /></ScrollAnimation>
                <ScrollAnimation>
                     <form onSubmit={onFormSubmit}>
                         <Text textAlign='center'><label htmlFor="password">Passwort</label></Text>
                         <Column alignItems='center'>
+                        <motion.div initial="initial" animate={shake ? "shake" : "initial"} variants={shakeAnimation}>
                         <StyledTextInput placeholder='Passwort' password onChange={setPassword}/>
+                        </motion.div>
                         <Space height={3}/>
                         <StyledButton type="submit">Login</StyledButton>
                         </Column>
                     </form>
                     </ScrollAnimation>
         </Column>
-        
+        </motion.div>
+      </Row>
     </StyledDiv>
   );
 };
