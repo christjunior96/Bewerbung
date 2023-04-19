@@ -70,7 +70,7 @@ interface ImagePropsWithEffect extends ImageProps {
   
     const animation = {
       hidden: { scale: 0 },
-      visible: { rotate: 360, scale: 1 },
+      visible: { scale: 1 },
     };
   
     const transition = {
