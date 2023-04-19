@@ -10,6 +10,7 @@ import Row from 'components/Molecule/Row';
 import Space from 'components/Atom/Space';
 import StyledTextInput from 'components/Molecule/StyledTextInput';
 import ResponsiveImage from 'components/Atom/ResponsiveImage';
+import ScrollAnimation from 'components/Atom/ScrollAnimation';
 
 const StyledDiv = styled.div`
     height: 100vh;
@@ -51,9 +52,13 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
 
   return (
     <StyledDiv>
+      
         <Column justifyContent='center' alignItems='center'>
+                <ScrollAnimation>
                 <ResponsiveImage alt='Louis Christ' src='/tobedeleted/LouisMain.jpg' width='150px' borderRadius='999px'/>
-                <Headline h={1} text='Portfolio' />
+                </ScrollAnimation>
+                <ScrollAnimation> <Headline h={1} text='Portfolio' /></ScrollAnimation>
+               <ScrollAnimation>
                     <form onSubmit={onFormSubmit}>
                         <Text textAlign='center'><label htmlFor="password">Passwort</label></Text>
                         <Column alignItems='center'>
@@ -62,7 +67,9 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
                         <StyledButton type="submit">Login</StyledButton>
                         </Column>
                     </form>
+                    </ScrollAnimation>
         </Column>
+        
     </StyledDiv>
   );
 };

@@ -41,8 +41,6 @@ const ImageWrapper = styled.div`
 `;
 
 
-
-
 interface ImagePropsWithEffect extends ImageProps {
     effect?: boolean;
   }

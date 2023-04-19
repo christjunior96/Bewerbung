@@ -20,6 +20,7 @@ import AnimatedHeadline from 'components/Atom/AnimatedHeadline';
 import VisibilitySensor from "react-visibility-sensor";
 import { motion, useAnimation } from "framer-motion";
 import Navbar from 'components/Organism/public/Navbar';
+import ScrollAnimation from 'components/Atom/ScrollAnimation';
 
 
 
@@ -98,17 +99,20 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
     <StyledDiv>
         <Column>
         <Space height={10}/>
+        <ScrollAnimation>
         <Row justifyContent='center'>
         <motion.div
         whileTap={{scale: 0.9, rotate: 10}}
         whileHover={{ scale: 1.1 }}
         transition={transition}>
-        <ResponsiveImage alt='Louis Christ' src='/tobedeleted/LouisMain.jpg' width='150px' borderRadius='999px'/>
+        <ResponsiveImage priority alt='Louis Christ' src='/tobedeleted/LouisMain.jpg' width='150px' borderRadius='999px'/>
         </motion.div>
         </Row>
+        </ScrollAnimation>
         <Space height={3}/>
-        <AnimatedHeadline text='Willkommen!'/>
+        <ScrollAnimation><AnimatedHeadline text='Willkommen!'/></ScrollAnimation>
         <Space height={5}/>
+        <ScrollAnimation>
         <Section backgroundColor='transparent'>
             <Row alignItems='center' rowSpace={10} justifyContent='center' breakMobilePx={500} distanceMobile={5}>
             <Text textAlign='center'>
@@ -117,7 +121,9 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             </Text>
             </Row>
         </Section>
+        </ScrollAnimation>
         <Space height={10}/>
+        <ScrollAnimation>
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='ecozins Relaunch'/>
             <Space height={5}/>
@@ -131,6 +137,8 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <InvestedProjects projects={['NextJS','TypeScript', 'Prisma', 'PostgreSQL', 'Styled Components','JWT Token', 'HTML','CSS','figma']} blue/>
             <PageSlider items={neueEcozins}/>
         </Section>
+        </ScrollAnimation>
+        <ScrollAnimation>
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='ecozins Website'/>
             <Space height={5}/>
@@ -143,6 +151,8 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Space height={5}/>
             <PageSlider items={ez}/>
         </Section>
+        </ScrollAnimation>
+        <ScrollAnimation>
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='Whitelabel'/>
             <Space height={5}/>
@@ -154,6 +164,8 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Space height={5}/>
             <PageSlider items={whitelabel}/>
         </Section>
+        </ScrollAnimation>
+        <ScrollAnimation>
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='Projekte aus meiner Selbstständigkeit'/>
             <Space height={5}/>
@@ -166,16 +178,22 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Space height={5}/>
             <PageSlider items={selbstst}/>
         </Section>
+        </ScrollAnimation>
+        <ScrollAnimation>
         <Section backgroundColor='transparent' id='Lebenslauf' sectionSpace={10}>
             <Headline h={2} small text='Lebenslauf'/>
             <Space height={5}/>
             <PageSlider items={lebenslauf}/>
         </Section>
+        </ScrollAnimation>
+        <ScrollAnimation>
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='Zertifikate'/>
             <Space height={5}/>
             <PageSlider items={unterlagen}/>
         </Section>
+        </ScrollAnimation>
+        <ScrollAnimation>
         <Section backgroundColor='transparent' id='Kontakt' sectionSpace={10}>
             <Headline h={2} small text='Kontakt'/>
             <Space height={5}/>
@@ -188,6 +206,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
               </Row>
             </Column>
         </Section>
+        </ScrollAnimation>
         </Column>
     </StyledDiv>
     </>

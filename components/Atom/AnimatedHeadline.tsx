@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion, Variants } from 'framer-motion';
 import styled from 'styled-components';
 import { Roboto_Slab } from '@next/font/google'
 
@@ -24,34 +24,50 @@ const H1 = styled.h1`
 type AnimatedHeadlineProps = {
   text: string;
   small?: boolean;
+  loop?: boolean;
 };
 
-const rubberBandAnimation = {
+const rubberBandAnimation: Variants = {
   initial: {
     y: 0,
     scaleY: 1,
-    scaleX:1
+    scaleX: 1
   },
   hover: {
     y: -10,
     scaleY: 1.1,
-    scaleX:1.2,
+    scaleX: 1.2
+  },
+  animate: (loop: boolean) => ({
+    y: [0, -5, 0],
+    scaleY: [1, 1.1, 1],
+    scaleX: [1, 1.1, 1],
     transition: {
-      duration: 0.25,
-      yoyo: Infinity
+      duration: 0.6,
+      repeat: loop ? Infinity : 0,
+      repeatType: 'reverse',
+      delay: Math.random()
     }
-  }
+  })
 };
 
-const AnimatedHeadline: React.FC<AnimatedHeadlineProps> = ({ text, small }) => {
+const AnimatedHeadline: React.FC<AnimatedHeadlineProps> = ({
+  text,
+  small,
+  loop = false
+}) => {
+  const [initialAnimationDone, setInitialAnimationDone] = useState(false);
   const letters = text.split('').map((letter, index) => (
     <StyledLetter
       key={index}
       className={interbold.className}
       initial="initial"
-      whileHover="hover"
+      whileHover={loop || initialAnimationDone ? "hover" : undefined}
+      animate="animate"
+      onAnimationComplete={() => !initialAnimationDone && setInitialAnimationDone(true)}
       variants={rubberBandAnimation}
-      theme={{s:small}}
+      theme={{ s: small }}
+      custom={loop}
     >
       <StyledContent>{letter}</StyledContent>
     </StyledLetter>
