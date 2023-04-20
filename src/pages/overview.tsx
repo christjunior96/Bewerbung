@@ -60,6 +60,10 @@ const unterlagen = [
   {"text":"Zertifikat SAP","url":"/Zertifikat-SAP.pdf","image":"/tobedeleted/sap.png"},
 ]
 
+const arbeitszeugnis = [
+  {"text":"AUDITcapital","url":"/Arbeitszeugnis_AUDITcapital.pdf","image":"/tobedeleted/audit.png"},
+]
+
 const lebenslauf = [ {"text":"Lebenslauf","url":"/Lebenslauf.pdf","image":"/tobedeleted/lebenslauf.png"},]
 
 
@@ -184,6 +188,13 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Headline h={2} small text='Lebenslauf'/>
             <Space height={5}/>
             <PageSlider items={lebenslauf}/>
+        </Section>
+        </ScrollAnimation>
+        <ScrollAnimation>
+        <Section backgroundColor='transparent' sectionSpace={10}>
+            <Headline h={2} small text='Arbeitszeugnisse'/>
+            <Space height={5}/>
+            <PageSlider items={arbeitszeugnis}/>
         </Section>
         </ScrollAnimation>
         <ScrollAnimation>
