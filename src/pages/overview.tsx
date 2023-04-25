@@ -62,6 +62,7 @@ const unterlagen = [
 
 const arbeitszeugnis = [
   {"text":"AUDITcapital","url":"/Arbeitszeugnis_AUDITcapital.pdf","image":"/tobedeleted/audit.png"},
+  {"text":"tripuls","url":"/AZ_tripuls.pdf","image":"/tobedeleted/tp.png"},
 ]
 
 const lebenslauf = [ {"text":"Lebenslauf","url":"/Lebenslauf.pdf","image":"/tobedeleted/lebenslauf.png"},]
