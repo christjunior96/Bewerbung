@@ -65,7 +65,8 @@ const arbeitszeugnis = [
   {"text":"tripuls","url":"/AZ_tripuls.pdf","image":"/tobedeleted/tp.png"},
 ]
 
-const lebenslauf = [ {"text":"Lebenslauf","url":"/Lebenslauf.pdf","image":"/tobedeleted/lebenslauf.png"},]
+const lebenslauf = [ {"text":"Deutsch","url":"/Lebenslauf.pdf","image":"/tobedeleted/lebenslauf.png"},
+                    {"text":"Englisch","url":"/Lebenslauf_EN.pdf","image":"/tobedeleted/lebenslauf.png"},]
 
 
 const StyledDiv = styled.div`
