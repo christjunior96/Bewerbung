@@ -130,11 +130,21 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
         </ScrollAnimation>
         <Space height={10}/>
         <ScrollAnimation>
+        <ScrollAnimation>
+        <Space height={5}/>
+        <Section backgroundColor='transparent'>
+            <Headline h={2} small text='RYZE Digital'/>
+            <InvestedProjects projects={['HTML','CSS','SCSS', 'Zeplin', 'JavaScript', 'ecoma']} blue/>
+            <Space height={4} />
+            <Text textAlign='center'>
+            RYZE Digital, eine mittelständische Agentur mit Sitz in Darmstadt, bot mir die Möglichkeit, an verschiedenen Webprojekten für namhafte Unternehmen mitzuwirken. Meine Tätigkeiten umfassten sowohl die Wartung als auch die komplette Neuentwicklung dieser Projekte. Durch die Unterstützung eines erfahrenen Mentors konnte ich meine Fähigkeiten in HTML5, SCSS/CSS und JavaScript erheblich erweitern und auf ein höheres Niveau bringen.            </Text>
+        </Section>
+        </ScrollAnimation>
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='ecozins Relaunch'/>
             <Space height={5}/>
             <Text textAlign='center'>
-            Dies ist das letzte Projekt, an dem ich gearbeitet habe. Leider wurde dieses Projekt nie abgeschlossen, dennoch hätte es mein bisher größtes Vorhaben werden können. Daher möchte ich hier präsentieren, was bis zu diesem Zeitpunkt entstanden ist. Anstatt ein konventionelles CMS zu nutzen, wurde ein eigenes CMS mit NextJS entwickelt, um die Themen und Projektseiten zu verwalten.
+            Leider wurde dieses Projekt nie abgeschlossen, dennoch hätte es mein bisher größtes Vorhaben bis dahin werden können. Ich möchte daher hier präsentieren, was bis zu diesem Zeitpunkt entstanden ist. Anstatt ein konventionelles CMS zu nutzen, wurde ein eigenes CMS mit NextJS entwickelt, um die Themen und Projektseiten zu verwalten.
             <br/><br/>
             <strong>Hinweis:</strong> Das Kundenkonto ist vollständig klickbar!            
             </Text>
