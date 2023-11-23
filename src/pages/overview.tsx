@@ -21,6 +21,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import { motion, useAnimation } from "framer-motion";
 import Navbar from 'components/Organism/public/Navbar';
 import ScrollAnimation from 'components/Atom/ScrollAnimation';
+import Image from "next/image";
 
 
 
@@ -132,14 +133,58 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
         <ScrollAnimation>
         <ScrollAnimation>
         <Space height={5}/>
-        <Section backgroundColor='transparent'>
+        <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='RYZE Digital'/>
-            <InvestedProjects projects={['HTML','CSS','SCSS', 'Zeplin', 'JavaScript', 'ecoma']} blue/>
             <Space height={4} />
             <Text textAlign='center'>
             RYZE Digital, eine mittelständische Agentur mit Sitz in Darmstadt, bot mir die Möglichkeit, an verschiedenen Webprojekten für namhafte Unternehmen mitzuwirken. Meine Tätigkeiten umfassten sowohl die Wartung als auch die komplette Neuentwicklung dieser Projekte. Durch die Unterstützung eines erfahrenen Mentors konnte ich meine Fähigkeiten in HTML5, SCSS/CSS und JavaScript erheblich erweitern und auf ein höheres Niveau bringen.            </Text>
+            <Space height={4} />
+            <Headline h={3} small text='Verwendete Tools'/>
+            <InvestedProjects projects={['HTML','CSS','SCSS', 'Zeplin', 'JavaScript', 'ecoma']} blue/>
         </Section>
         </ScrollAnimation>
+
+        <ScrollAnimation>
+        <Section backgroundColor='transparent' sectionSpace={10}>
+            <Headline h={2} small text='bae App'/>
+            <Space height={4} />
+            <Text textAlign='center'>
+            Die "bae" App repräsentiert meinen ersten bedeutenden Beitrag in der Welt der App-Entwicklung, die ich in Zusammenarbeit mit einem Kollegen realisiert habe. Ich habe das Administrationsbackend sowie die Schnittstellen mit NextJS programmiert, was die Verwaltung von Events für Clubs ermöglicht sowie alle Funktionalitäten in der App. Darüber hinaus wurde die App selbst in Flutter entwickelt, um eine breite Kompatibilität mit Android und iOS zu gewährleisten. Ursprünglich konzipiert, um Speed-Dating-Erlebnisse via Video zu ermöglichen, erlaubt die App Nutzern, bei einem vierminütigen Video-Date eine Verbindung herzustellen. Aktuell befindet sich die App in einer Transformationsphase, in der neue Funktionen integriert werden, um Partygäste zu identifizieren und anschließend Kontakte knüpfen zu können, indem sie sich über einen QR-Code auf der Party registrieren. Unser Ziel ist es, eine wachsende Nutzerbasis zu etablieren, um das Video-Dating-Feature erneut in den Fokus zu rücken.
+            </Text>
+            <Space height={4}/>
+            <Headline h={3} small text='Verwendete Tools'/>
+            <InvestedProjects projects={['NextJS','Styled Components','TypeScript', 'Flutter']} blue/>
+            <Space height={5}/>
+            <Row justifyContent='center' alignItems='center' rowSpace={4}>
+            <Link
+            href={
+              "https://play.google.com/store/apps/details?id=com.baedating.app&hl=de"
+            }
+          >
+            <Image
+              alt="Android Logo"
+              width={160}
+              height={60}
+              src={"/googlePlay.png"}
+            />
+          </Link>
+          <Link
+            href={
+              "https://apps.apple.com/de/app/bae-online-speeddating/id1669880074"
+            }
+          >
+            <Image
+              alt="Apple Logo"
+              width={160}
+              height={50}
+              src={"/apple.svg"}
+            />
+          </Link>
+            </Row>
+            
+        </Section>
+        </ScrollAnimation>
+
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='ecozins Relaunch'/>
             <Space height={5}/>
