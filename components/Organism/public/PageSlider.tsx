@@ -121,7 +121,7 @@ const PageSlider = ({ items }: PageListe) => {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 1 }}
                             >
-                                <StyledLink className={nunito.className} href={item.url}>{item.text}</StyledLink>
+                                <StyledLink className={nunito.className} target="_blank" href={item.url}>{item.text}</StyledLink>
                             </motion.div>                     
                             </Column>
                         </SwiperSlide>

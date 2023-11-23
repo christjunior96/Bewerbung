@@ -157,6 +157,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Space height={5}/>
             <Row justifyContent='center' alignItems='center' rowSpace={4}>
             <Link
+            target='_blank'
             href={
               "https://play.google.com/store/apps/details?id=com.baedating.app&hl=de"
             }
@@ -169,6 +170,7 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             />
           </Link>
           <Link
+            target='_blank'
             href={
               "https://apps.apple.com/de/app/bae-online-speeddating/id1669880074"
             }
