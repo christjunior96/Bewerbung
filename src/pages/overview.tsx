@@ -54,6 +54,11 @@ const ez = [
   {"text":"Newsletter","url":"/template.html","image":"/tobedeleted/template.png"},
 ]
 
+const ryze = [
+  {"text":"STILL","url":"https://sustainability.still.eu/stories/de/","image":"/still.png"},
+  {"text":"Linde","url":"https://sustainability.linde-mh.com/stories/de/","image":"/linde.png"},
+]
+
 const unterlagen = [
   
   {"text":"Zertifikat Flutter","url":"/Zertifikat-Flutter.pdf","image":"/tobedeleted/flutter.png"},
@@ -141,51 +146,11 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
             <Space height={4} />
             <Headline h={3} small text='Verwendete Tools'/>
             <InvestedProjects projects={['HTML','CSS','SCSS', 'Zeplin', 'JavaScript', 'ecoma']} blue/>
+            <PageSlider items={ryze}/>
         </Section>
         </ScrollAnimation>
 
-        <ScrollAnimation>
-        <Section backgroundColor='transparent' sectionSpace={10}>
-            <Headline h={2} small text='bae App'/>
-            <Space height={4} />
-            <Text textAlign='center'>
-            Die &quot;bae&quot; App repräsentiert meinen ersten bedeutenden Beitrag in der Welt der App-Entwicklung, die ich in Zusammenarbeit mit einem Kollegen realisiert habe. Ich habe das Administrationsbackend sowie die Schnittstellen mit NextJS programmiert, was die Verwaltung von Events für Clubs ermöglicht sowie alle Funktionalitäten in der App. Darüber hinaus wurde die App selbst in Flutter entwickelt, um eine breite Kompatibilität mit Android und iOS zu gewährleisten. Ursprünglich konzipiert, um Speed-Dating-Erlebnisse via Video zu ermöglichen, erlaubt die App Nutzern, bei einem vierminütigen Video-Date eine Verbindung herzustellen. Aktuell befindet sich die App in einer Transformationsphase, in der neue Funktionen integriert werden, um Partygäste zu identifizieren und anschließend Kontakte knüpfen zu können, indem sie sich über einen QR-Code auf der Party registrieren. Unser Ziel ist es, eine wachsende Nutzerbasis zu etablieren, um das Video-Dating-Feature erneut in den Fokus zu rücken.
-            </Text>
-            <Space height={4}/>
-            <Headline h={3} small text='Verwendete Tools'/>
-            <InvestedProjects projects={['NextJS','Styled Components','TypeScript', 'Flutter']} blue/>
-            <Space height={5}/>
-            <Row justifyContent='center' alignItems='center' rowSpace={4}>
-            <Link
-            target='_blank'
-            href={
-              "https://play.google.com/store/apps/details?id=com.baedating.app&hl=de"
-            }
-          >
-            <Image
-              alt="Android Logo"
-              width={160}
-              height={60}
-              src={"/googlePlay.png"}
-            />
-          </Link>
-          <Link
-            target='_blank'
-            href={
-              "https://apps.apple.com/de/app/bae-online-speeddating/id1669880074"
-            }
-          >
-            <Image
-              alt="Apple Logo"
-              width={160}
-              height={50}
-              src={"/apple.svg"}
-            />
-          </Link>
-            </Row>
-            
-        </Section>
-        </ScrollAnimation>
+      
 
         <Section backgroundColor='transparent' sectionSpace={10}>
             <Headline h={2} small text='ecozins Relaunch'/>
