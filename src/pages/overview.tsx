@@ -55,12 +55,11 @@ const ez = [
 ]
 
 const ryze = [
+  { "text": "Brain Zwingenberg", "url": "https://www.brain-biotech.com/en/", "image": "/brain-zw.png" },
+  { "text": "Brain Group", "url": "https://www.brain-biotech-group.com/en/", "image": "/brain-an.png" },
+  { "text": "Capol", "url": "https://www.capol.de/de/", "image": "/capol.png" },
   { "text": "STILL", "url": "https://sustainability.still.eu/stories/de/", "image": "/still.png" },
   { "text": "Linde", "url": "https://sustainability.linde-mh.com/stories/de/", "image": "/linde.png" },
-]
-
-const feature = [
-  { "text": "feature", "url": "https://www.event-feature.com/", "image": "/feature.png" },
 ]
 
 const unterlagen = [
@@ -140,22 +139,6 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
           </ScrollAnimation>
           <Space height={10} />
 
-          <ScrollAnimation>
-            <Space height={5} />
-            <Section backgroundColor='transparent' sectionSpace={10}>
-              <Headline h={2} small text='feature - Digitale Garderobe' />
-              <Space height={4} />
-              <Text textAlign='center'>
-                In Zusammenarbeit mit einem Club in Wien habe ich die digitale Garderobe entwickelt. Dabei erhält der Gast keine Garderobenmarke aus Papier mehr, sondern eine digitale Marke per E-Mail. Die digitale Garderobenmarke kann in jedem Club wiederverwendet werden, und die gesammelten Daten können zusätzlich für Marketingzwecke verwendet werden.
-                <br /><br />
-                Der Garderobier bekommt ein Tablet, das mit einem handelsüblichen QR-Code-Scanner verbunden ist und kann so die Garderobe ein- und auschecken. Auf dem Tablet läuft eine Progressive Web App. Das gesamte Projekt habe ich in Zusammenarbeit mit einem UX-Designer mit NextJS entwickelt.
-              </Text>
-              <Space height={4} />
-              <Headline h={3} small text='Verwendete Tools' />
-              <InvestedProjects projects={['NextJS', 'Prisma', 'TypeScript', 'SQL', 'SCSS']} blue />
-              <PageSlider items={feature} />
-            </Section>
-          </ScrollAnimation>
 
           <ScrollAnimation>
             <ScrollAnimation>
@@ -165,6 +148,12 @@ const Login = (props: InferGetServerSidePropsType<typeof getServerSideProps>) =>
                 <Space height={4} />
                 <Text textAlign='center'>
                   RYZE Digital, eine mittelständische Agentur mit Sitz in Darmstadt, bot mir die Möglichkeit, an verschiedenen Webprojekten für namhafte Unternehmen mitzuwirken. Meine Tätigkeiten umfassten sowohl die Wartung als auch die komplette Neuentwicklung dieser Projekte. Durch die Unterstützung eines erfahrenen Mentors konnte ich meine Fähigkeiten in HTML5, SCSS/CSS und JavaScript erheblich erweitern und auf ein höheres Niveau bringen.            </Text>
+                <Space height={6} />
+                <Headline h={4} small text='Technischer Projektleiter für Geschäftsberichte bei RYZE Digital' />
+                <Space height={4} />
+                <Text textAlign='center'>
+                  Als technischer Projektleiter bei RYZE Digital bin ich verantwortlich für die Konzeption, Entwicklung und Umsetzung digitaler Geschäftsberichte. Mein Fokus liegt auf der technischen Architektur, Performance-Optimierung und einer nahtlosen User Experience. Mit meinem Know-how unerstütze ich die Projektmanager und Kunden bei der Umsetzung der digitalen Geschäftsberichte. Ich stelle sicher, dass unsere Lösungen nicht nur visuell überzeugen, sondern auch effizient und skalierbar sind.
+                </Text>
                 <Space height={4} />
                 <Headline h={3} small text='Verwendete Tools' />
                 <InvestedProjects projects={['HTML', 'CSS', 'SCSS', 'Zeplin', 'JavaScript', 'ecoma']} blue />
