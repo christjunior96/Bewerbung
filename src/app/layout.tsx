@@ -5,6 +5,9 @@ import Navbar from "../components/Navbar";
 export const metadata: Metadata = {
   title: "Louis Christ | Portfolio",
   description: "Technical Project Manager & Frontend Developer Portfolio",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
