@@ -84,7 +84,7 @@ function MainStructure() {
 
 export default function SceneLogin() {
     return (
-        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, background: '#020617' }}>
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, background: '#020617', pointerEvents: 'none' }}>
             <Canvas camera={{ position: [0, 0, 20], fov: 60 }}>
                 <ambientLight intensity={0.2} />
                 <pointLight position={[10, 10, 10]} intensity={1.5} color="#38bdf8" />

@@ -6,7 +6,7 @@
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background: transparent; // Make transparent to see SceneLogin
+    background: transparent;
 }
 
 .loginContainer {
@@ -14,9 +14,8 @@
     width: 100vw;
     @include flex-center;
     padding: $spacing-md;
-    z-index: 100;
+    z-index: 50;
     position: relative;
-    perspective: 2000px;
     background: transparent;
 }
 
@@ -39,9 +38,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform-style: preserve-3d;
     position: relative;
     animation: floatingLogin 6s ease-in-out infinite;
+    pointer-events: auto;
+    z-index: 100;
+
+    @include mobile {
+        padding: $spacing-xl $spacing-md;
+        border-radius: $radius-lg;
+    }
 
     // Outer glow for depth
     &::after {
@@ -60,17 +65,16 @@
 
     0%,
     100% {
-        transform: translateY(0) rotateX(0);
+        transform: translateY(0);
     }
 
     50% {
-        transform: translateY(-20px) rotateX(2deg);
+        transform: translateY(-20px);
     }
 }
 
 .cardContent {
     width: 100%;
-    transform-style: preserve-3d;
 }
 
 .title {
@@ -84,6 +88,10 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @include mobile {
+        margin-bottom: $spacing-lg;
+    }
 }
 
 .form {
@@ -91,7 +99,12 @@
     display: flex;
     flex-direction: column;
     gap: $spacing-xl;
-    transform-style: preserve-3d;
+    position: relative;
+    z-index: 10;
+
+    @include mobile {
+        gap: $spacing-lg;
+    }
 }
 
 .inputWrapper {
@@ -126,6 +139,11 @@
                 0 0 30px rgba($color-primary, 0.2),
                 inset 0 2px 10px rgba(0, 0, 0, 0.5);
         }
+
+        @include mobile {
+            padding: 16px;
+            font-size: 1rem;
+        }
     }
 }
 
@@ -139,6 +157,10 @@
     font-size: 0.9rem;
     font-weight: 500;
     margin-top: -$spacing-md;
+
+    @include mobile {
+        margin-top: -$spacing-sm;
+    }
 }
 
 .loginButton {

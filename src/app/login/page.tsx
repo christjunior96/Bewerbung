@@ -43,18 +43,18 @@ export default function LoginPage() {
             <SceneLogin />
 
             <div className={styles.loginContainer}>
-                <TiltCard intensity={25} className={styles.tiltWrapper}>
+                <TiltCard intensity={10} className={styles.tiltWrapper}>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                         className={styles.loginCard}
                     >
-                        <div className={styles.cardContent} style={{ transform: 'translateZ(60px)' }}>
+                        <div className={styles.cardContent}>
                             <h1 className={styles.title}>Louis Portfolio</h1>
 
                             <form onSubmit={handleLogin} className={styles.form}>
-                                <div className={styles.inputWrapper} style={{ transform: 'translateZ(40px)' }}>
+                                <div className={styles.inputWrapper}>
                                     <input
                                         type="password"
                                         placeholder="Passwort"
@@ -70,7 +70,6 @@ export default function LoginPage() {
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         className={styles.errorMessage}
-                                        style={{ transform: 'translateZ(30px)' }}
                                     >
                                         Ungültiges Passwort
                                     </motion.div>
@@ -80,7 +79,6 @@ export default function LoginPage() {
                                     type="submit"
                                     className={`${styles.loginButton} ${isLoading ? styles.loading : ''}`}
                                     disabled={isLoading}
-                                    style={{ transform: 'translateZ(50px)' }}
                                 >
                                     {isLoading ? 'Lade...' : 'Eintreten'}
                                 </button>

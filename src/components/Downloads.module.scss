@@ -9,6 +9,10 @@
 .sectionTitle {
     text-align: center;
     margin-bottom: $spacing-xl;
+
+    @include tablet {
+        text-align: left;
+    }
 }
 
 .grid {
@@ -16,6 +20,12 @@
     justify-content: center;
     gap: $spacing-lg;
     flex-wrap: wrap;
+
+    @include tablet {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
 }
 
 .downloadCard {
@@ -28,9 +38,17 @@
     flex-direction: column;
     align-items: center;
     gap: $spacing-md;
+
+    @include tablet {
+        text-align: left;
+        align-items: flex-start;
+        width: 100%;
+    }
+
     color: $color-text;
     transform-style: preserve-3d;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: box-shadow 0.3s ease,
+    border-color 0.3s ease;
     height: 100%;
 
     &:hover {

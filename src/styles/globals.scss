@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 @use 'reset';
 @use 'typography';
 
@@ -60,8 +61,23 @@ body {
     max-width: $breakpoint-wide;
     margin: 0 auto;
     padding: 0 $spacing-md;
+
+    @include tablet {
+        padding: 0 $spacing-sm;
+    }
 }
 
 .section {
     padding: $spacing-xxl 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    color: #94a3b8;
+
+    @include tablet {
+        text-align: left;
+    }
 }

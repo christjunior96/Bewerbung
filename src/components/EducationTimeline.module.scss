@@ -13,6 +13,11 @@
     font-size: clamp(2rem, 5vw, 3rem);
     @include gradient-text;
     letter-spacing: -1px;
+
+    @include tablet {
+        text-align: left;
+        margin-bottom: $spacing-xl;
+    }
 }
 
 .timeline {

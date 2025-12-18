@@ -33,10 +33,10 @@
     position: relative;
     z-index: 1;
 
-    @include mobile {
+    @include tablet {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
     }
 }
 
@@ -84,8 +84,8 @@
     color: $color-text-muted;
     font-size: 1.1rem;
 
-    @include mobile {
-        justify-content: center;
+    @include tablet {
+        justify-content: flex-start;
     }
 }
 
@@ -101,8 +101,8 @@
     max-width: 600px;
     color: $color-text-muted;
 
-    @include mobile {
-        margin: 0 auto;
+    @include tablet {
+        margin: 0;
     }
 }
 

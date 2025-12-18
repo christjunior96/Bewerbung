@@ -16,7 +16,7 @@ export default function Home() {
         <Downloads />
       </main>
 
-      <footer style={{ textAlign: 'center', padding: '2rem', marginTop: 'auto', color: '#94a3b8' }}>
+      <footer className="footer">
         <p>&copy; {new Date().getFullYear()} Louis Christ. Alle Rechte vorbehalten.</p>
       </footer>
     </LoginGate>
