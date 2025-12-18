@@ -1,0 +1,110 @@
+@use '../styles/mixins' as *;
+@use '../styles/variables' as *;
+
+.educationSection {
+    position: relative;
+    padding: $spacing-xxl 0;
+    overflow: hidden;
+}
+
+.sectionTitle {
+    text-align: center;
+    margin-bottom: $spacing-xxl;
+    font-size: clamp(2rem, 5vw, 3rem);
+    @include gradient-text;
+    letter-spacing: -1px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+
+    // Vertical line
+    &::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, $color-primary, transparent);
+
+        @include tablet {
+            left: 15px;
+        }
+    }
+}
+
+.timelineItem {
+    position: relative;
+    padding-left: 60px;
+
+    @include tablet {
+        padding-left: 50px;
+    }
+}
+
+.dot {
+    position: absolute;
+    left: 13px; // Center on line (20px left + 1px half-width of line = ~21px center. Point is 16px wide, so left=21-8=13)
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: $color-bg;
+    border: 4px solid $color-accent;
+    box-shadow: 0 0 10px rgba($color-accent, 0.5);
+    z-index: 2;
+
+    @include tablet {
+        left: 8px;
+    }
+}
+
+.content {
+    @include glass(0.05, 10px);
+    padding: $spacing-lg;
+    border-radius: $radius-md;
+    border-left: 3px solid rgba($color-accent, 0.5);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateX(5px);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: $spacing-xs;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+}
+
+.institution {
+    font-size: 1.25rem;
+    color: $color-white;
+}
+
+.period {
+    font-family: monospace;
+    color: $color-text-muted;
+}
+
+.degree {
+    color: $color-accent;
+    font-size: 1.1rem;
+    margin-bottom: $spacing-xs;
+    font-weight: 600;
+}
+
+.description {
+    color: $color-text-muted;
+    margin-bottom: 0;
+}

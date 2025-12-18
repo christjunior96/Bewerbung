@@ -1,0 +1,302 @@
+@use '../styles/mixins' as *;
+@use '../styles/variables' as *;
+
+.hero {
+    min-height: 100vh;
+    @include flex-center;
+    position: relative;
+    overflow: hidden;
+    padding: $spacing-xl 0;
+    background: transparent;
+}
+
+.heroContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-xxl;
+    z-index: 10;
+    width: 100%;
+
+    @include tablet {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: $spacing-xl;
+        margin-top: $spacing-xl;
+    }
+}
+
+// Text Content
+.textContent {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        align-items: center;
+    }
+}
+
+.greeting {
+    font-size: 1.1rem;
+    color: $color-accent;
+    margin-bottom: $spacing-xs;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+}
+
+.name {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1.05;
+    font-weight: 800;
+    margin-bottom: $spacing-md;
+    letter-spacing: -2px;
+    color: $color-white;
+
+    // Modern text stroke or gradient
+    background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include mobile {
+        font-size: 3rem;
+    }
+}
+
+.roleContainer {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: $color-primary;
+    margin-bottom: $spacing-lg;
+    display: flex;
+    gap: $spacing-sm;
+    height: 1.5em;
+    font-family: $font-family-heading;
+    font-weight: 600;
+
+    @include mobile {
+        justify-content: center;
+    }
+}
+
+.roleWrapper {
+    position: relative;
+    color: $color-text;
+    border-bottom: 2px solid $color-primary;
+}
+
+.roleDynamic {
+    display: block;
+    white-space: nowrap;
+}
+
+.description {
+    font-size: 1.25rem;
+    color: $color-text-muted;
+    max-width: 600px;
+    margin-bottom: $spacing-xl;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+// Buttons
+.ctaGroup {
+    display: flex;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+
+    @include tablet {
+        justify-content: center;
+    }
+}
+
+.btnPrimary {
+    background: $color-white;
+    color: $color-bg;
+    padding: 16px 32px;
+    border-radius: $radius-md;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+
+    &:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 15px 40px rgba($color-primary, 0.4);
+        background: $color-primary;
+        color: $color-white;
+
+        .btnIcon {
+            transform: translateX(5px);
+        }
+    }
+}
+
+.btnIcon {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.btnSecondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: $color-white;
+    padding: 16px 32px;
+    border-radius: $radius-md;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: $color-white;
+        transform: translateY(-2px);
+    }
+}
+
+// Image / Visuals
+.imageWrapper {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: $spacing-xl;
+    transform-style: preserve-3d;
+
+    @include tablet {
+        padding: $spacing-md;
+    }
+}
+
+.floatingCard {
+    width: 380px;
+    height: 480px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: $radius-xl;
+    backdrop-filter: blur(20px);
+    padding: $spacing-sm;
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        inset 0 0 20px rgba(255, 255, 255, 0.05);
+    transform-style: preserve-3d;
+    z-index: 1;
+
+    @include tablet {
+        width: 300px;
+        height: 380px;
+    }
+}
+
+.imageInner {
+    width: 100%;
+    height: 100%;
+    border-radius: $radius-lg;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+    @include flex-center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+
+    &:hover {
+        filter: grayscale(0%) contrast(100%);
+    }
+}
+
+.badge {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 20px;
+    border-radius: 100px;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 100; // Even higher to be absolutely sure
+    pointer-events: none;
+}
+
+.badge1 {
+    top: 5%;
+    right: -5%;
+}
+
+.badge2 {
+    bottom: 10%;
+    left: -5%;
+}
+
+// Scroll Indicator
+.scrollIndicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.mouse {
+    width: 26px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: $color-primary;
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 2s infinite;
+}
+
+@keyframes scrollWheel {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(15px);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 200%;
+    }
+
+    100% {
+        left: 200%;
+    }
+}

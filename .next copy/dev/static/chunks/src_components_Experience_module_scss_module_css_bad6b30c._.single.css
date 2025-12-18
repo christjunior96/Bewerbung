@@ -1,0 +1,27 @@
+/* [project]/src/components/Experience.module.scss.module.css [app-client] (css) */
+.Experience-module-scss-module__8ZZ5WG__experienceSection {
+  background: none;
+  padding: 5rem 0;
+  position: relative;
+}
+
+.Experience-module-scss-module__8ZZ5WG__sectionTitle {
+  text-align: center;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-text-fill-color: #0000;
+  letter-spacing: -1px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.Experience-module-scss-module__8ZZ5WG__list {
+  z-index: 2;
+  flex-direction: column;
+  gap: 5rem;
+  display: flex;
+  position: relative;
+}
+
+/*# sourceMappingURL=src_components_Experience_module_scss_module_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,63 @@
+@use 'variables' as *;
+
+// Media Queries
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+
+// Layout
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin grid-auto-fit($min-size: 250px, $gap: $spacing-md) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min-size, 1fr));
+    gap: $gap;
+}
+
+// Visual Effects
+@mixin glass($opacity: 0.1, $blur: 10px) {
+    background: rgba(255, 255, 255, $opacity);
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+@mixin card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@mixin gradient-text {
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

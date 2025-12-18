@@ -1,0 +1,121 @@
+/* [project]/src/components/EducationTimeline.module.scss.module.css [app-client] (css) */
+.EducationTimeline-module-scss-module__g-F81q__educationSection {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.EducationTimeline-module-scss-module__g-F81q__sectionTitle {
+  text-align: center;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-text-fill-color: #0000;
+  letter-spacing: -1px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.EducationTimeline-module-scss-module__g-F81q__timeline {
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.EducationTimeline-module-scss-module__g-F81q__timeline:before {
+  content: "";
+  background: linear-gradient(#38bdf8, #0000);
+  width: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+}
+
+@media (max-width: 768px) {
+  .EducationTimeline-module-scss-module__g-F81q__timeline:before {
+    left: 15px;
+  }
+}
+
+.EducationTimeline-module-scss-module__g-F81q__timelineItem {
+  padding-left: 60px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .EducationTimeline-module-scss-module__g-F81q__timelineItem {
+    padding-left: 50px;
+  }
+}
+
+.EducationTimeline-module-scss-module__g-F81q__dot {
+  z-index: 2;
+  background: #0f172a;
+  border: 4px solid #f472b6;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 13px;
+  box-shadow: 0 0 10px #f472b680;
+}
+
+@media (max-width: 768px) {
+  .EducationTimeline-module-scss-module__g-F81q__dot {
+    left: 8px;
+  }
+}
+
+.EducationTimeline-module-scss-module__g-F81q__content {
+  -webkit-backdrop-filter: blur(10px);
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-left: 3px solid #f472b680;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all .3s;
+  box-shadow: 0 4px 30px #0000001a;
+}
+
+.EducationTimeline-module-scss-module__g-F81q__content:hover {
+  background: #ffffff14;
+  transform: translateX(5px);
+}
+
+.EducationTimeline-module-scss-module__g-F81q__header {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: .5rem;
+  margin-bottom: .5rem;
+  display: flex;
+}
+
+.EducationTimeline-module-scss-module__g-F81q__institution {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.EducationTimeline-module-scss-module__g-F81q__period {
+  color: #94a3b8;
+  font-family: monospace;
+}
+
+.EducationTimeline-module-scss-module__g-F81q__degree {
+  color: #f472b6;
+  margin-bottom: .5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.EducationTimeline-module-scss-module__g-F81q__description {
+  color: #94a3b8;
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=src_components_EducationTimeline_module_scss_module_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,117 @@
+/* [project]/src/components/ProjectCard.module.scss.module.css [app-client] (css) */
+.ProjectCard-module-scss-module__p0dm1a__cardWrapper {
+  perspective: 1000px;
+  height: 100%;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__card {
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #1e293b66;
+  border: 1px solid #ffffff0d;
+  border-radius: 12px;
+  flex-direction: column;
+  transition: box-shadow .3s, border-color .3s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__card:hover {
+  border-color: #38bdf880;
+  box-shadow: 0 20px 40px -10px #00000080;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__card:hover .ProjectCard-module-scss-module__p0dm1a__overlay {
+  opacity: 1;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__card:hover .ProjectCard-module-scss-module__p0dm1a__placeholderImage {
+  transform: scale(1.1);
+}
+
+.ProjectCard-module-scss-module__p0dm1a__imageContainer {
+  background: #0f172a;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__placeholderImage {
+  background-color: #1e293b;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform .5s;
+  position: relative;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__placeholderImage:after {
+  content: "";
+  background: linear-gradient(45deg, #38bdf81a, #0000);
+  position: absolute;
+  inset: 0;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__overlay {
+  opacity: 0;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  background: #0f172a99;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .3s;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__viewProject {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: .5rem 1rem;
+  font-weight: 600;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__content {
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__title {
+  color: #fff;
+  margin-bottom: .5rem;
+  font-family: Outfit, sans-serif;
+  font-size: 1.25rem;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__description {
+  color: #94a3b8;
+  flex: 1;
+  margin-bottom: 1.5rem;
+  font-size: .95rem;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__tags {
+  flex-wrap: wrap;
+  gap: .5rem;
+  display: flex;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__tag {
+  color: #38bdf8;
+  background: #38bdf81a;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=src_components_ProjectCard_module_scss_module_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,15 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://github.com/christjunior96/portfolio2.0.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	gfserviceaccountuuid = DE3278CF-BAC3-48A6-8A39-6B2EE6B96374
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+	vscode-merge-base = origin/main

@@ -1,0 +1,41 @@
+// Colors
+$color-bg: #0f172a; // Deep blue/slate
+$color-bg-secondary: #1e293b;
+$color-text: #f1f5f9;
+$color-text-muted: #94a3b8;
+$color-primary: #38bdf8; // Sky blue
+$color-secondary: #818cf8; // Indigo
+$color-accent: #f472b6; // Pink
+$color-success: #34d399;
+$color-error: #f87171;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, $color-primary, $color-secondary);
+$gradient-bg: radial-gradient(circle at top left, #1e293b, $color-bg);
+
+// Fonts
+$font-family-main: 'Inter', sans-serif;
+$font-family-heading: 'Outfit', sans-serif;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-xxl: 5rem;
+
+// BorderRadius
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-xl: 32px;
+
+// Breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1280px;

@@ -1,0 +1,170 @@
+/* [project]/src/app/login/page.module.scss.module.css [app-client] (css) */
+.page-module-scss-module__rO5OTa__loginPage {
+  background: none;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-module-scss-module__rO5OTa__loginContainer {
+  z-index: 100;
+  perspective: 2000px;
+  background: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 1.5rem;
+  display: flex;
+  position: relative;
+}
+
+.page-module-scss-module__rO5OTa__tiltWrapper {
+  z-index: 20;
+  width: 100%;
+  max-width: 460px;
+}
+
+.page-module-scss-module__rO5OTa__loginCard {
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  text-align: center;
+  transform-style: preserve-3d;
+  background: #0f172a66;
+  border: 1px solid #ffffff1a;
+  border-radius: 32px;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+  animation: 6s ease-in-out infinite page-module-scss-module__rO5OTa__floatingLogin;
+  display: flex;
+  position: relative;
+  box-shadow: 0 40px 100px -20px #000c, inset 0 0 40px #ffffff0d;
+}
+
+.page-module-scss-module__rO5OTa__loginCard:after {
+  content: "";
+  border-radius: inherit;
+  z-index: -1;
+  opacity: .15;
+  filter: blur(40px);
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  position: absolute;
+  inset: -2px;
+}
+
+@keyframes page-module-scss-module__rO5OTa__floatingLogin {
+  0%, 100% {
+    transform: translateY(0)rotateX(0);
+  }
+
+  50% {
+    transform: translateY(-20px)rotateX(2deg);
+  }
+}
+
+.page-module-scss-module__rO5OTa__cardContent {
+  width: 100%;
+  transform-style: preserve-3d;
+}
+
+.page-module-scss-module__rO5OTa__title {
+  color: #fff;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #fff 0%, #fff6 100%);
+  -webkit-text-fill-color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 3rem;
+  font-family: Outfit, sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+}
+
+.page-module-scss-module__rO5OTa__form {
+  width: 100%;
+  transform-style: preserve-3d;
+  flex-direction: column;
+  gap: 3rem;
+  display: flex;
+}
+
+.page-module-scss-module__rO5OTa__inputWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.page-module-scss-module__rO5OTa__inputWrapper input {
+  color: #fff;
+  text-align: center;
+  background: #0006;
+  border: 1px solid #ffffff1a;
+  border-radius: 20px;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.1rem;
+  transition: all .4s cubic-bezier(.175, .885, .32, 1.275);
+  box-shadow: inset 0 2px 10px #00000080;
+}
+
+.page-module-scss-module__rO5OTa__inputWrapper input::placeholder {
+  color: #fff3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .8rem;
+}
+
+.page-module-scss-module__rO5OTa__inputWrapper input:focus {
+  background: #0009;
+  border-color: #38bdf8;
+  outline: none;
+  transform: scale(1.02);
+  box-shadow: 0 0 30px #38bdf833, inset 0 2px 10px #00000080;
+}
+
+.page-module-scss-module__rO5OTa__inputError {
+  border-color: #f87171 !important;
+  box-shadow: 0 0 20px #f8717133 !important;
+}
+
+.page-module-scss-module__rO5OTa__errorMessage {
+  color: #f87171;
+  margin-top: -1.5rem;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.page-module-scss-module__rO5OTa__loginButton {
+  color: #0f172a;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  padding: 18px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  transition: all .4s cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.page-module-scss-module__rO5OTa__loginButton:hover:not(:disabled) {
+  color: #fff;
+  background: #38bdf8;
+  transform: translateZ(20px)scale(1.05);
+  box-shadow: 0 20px 40px #0006;
+}
+
+.page-module-scss-module__rO5OTa__loginButton:active:not(:disabled) {
+  transform: scale(.98);
+}
+
+.page-module-scss-module__rO5OTa__loginButton.page-module-scss-module__rO5OTa__loading {
+  opacity: .7;
+  cursor: wait;
+  background: #94a3b8;
+}
+
+/*# sourceMappingURL=src_app_login_page_module_scss_module_d96864d3.css.map*/

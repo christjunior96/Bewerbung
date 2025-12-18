@@ -1,0 +1,98 @@
+/* [project]/src/components/Downloads.module.scss.module.css [app-client] (css) */
+.Downloads-module-scss-module__VMUUdW__downloadsSection {
+  background: #0000001a;
+  padding-bottom: 10rem;
+}
+
+.Downloads-module-scss-module__VMUUdW__sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.Downloads-module-scss-module__VMUUdW__grid {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  display: flex;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard {
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  color: #f1f5f9;
+  width: 280px;
+  transform-style: preserve-3d;
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  height: 100%;
+  padding: 3rem 2rem;
+  transition: box-shadow .3s, border-color .3s;
+  display: flex;
+  box-shadow: 0 4px 30px #0000001a;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard:hover {
+  border-color: #38bdf866;
+  box-shadow: 0 20px 40px -10px #00000080;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard:hover .Downloads-module-scss-module__VMUUdW__icon {
+  transform: scale(1.1)rotate(5deg)translateZ(60px);
+}
+
+.Downloads-module-scss-module__VMUUdW__icon {
+  font-size: 3.5rem;
+  transition: transform .4s cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.Downloads-module-scss-module__VMUUdW__cardTitle {
+  color: #fff;
+  margin-bottom: .5rem;
+  font-family: Outfit, sans-serif;
+  font-size: 1.25rem;
+}
+
+.Downloads-module-scss-module__VMUUdW__linksContainer {
+  flex-direction: column;
+  gap: .5rem;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadLink {
+  color: #94a3b8;
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  transition: all .2s;
+  display: flex;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadLink span {
+  opacity: .5;
+  font-size: 1.1rem;
+  transition: transform .3s;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadLink:hover {
+  color: #fff;
+  background: #38bdf81a;
+  border-color: #38bdf84d;
+  transform: translateX(4px);
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadLink:hover span {
+  opacity: 1;
+  transform: translateY(2px);
+}
+
+/*# sourceMappingURL=src_components_Downloads_module_scss_module_css_bad6b30c._.single.css.map*/

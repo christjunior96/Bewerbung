@@ -1,0 +1,92 @@
+@use '../styles/mixins' as *;
+@use '../styles/variables' as *;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: $spacing-md 0;
+    transition: all 0.3s ease;
+
+    &.scrolled {
+        background: rgba(15, 23, 42, 0.65);
+        -webkit-backdrop-filter: blur(25px) saturate(1.8);
+        backdrop-filter: blur(25px) saturate(1.8);
+        padding: $spacing-sm 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+
+        // Optional: subtle inner glow for more depth
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba($color-primary, 0.3), transparent);
+        }
+    }
+}
+
+.navContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: $font-family-heading;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: $color-white;
+    cursor: pointer;
+
+    span {
+        background: $gradient-primary;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xl;
+    list-style: none;
+
+    @include tablet {
+        display: none; // For simplicity now, could add a menu
+    }
+
+    li {
+        a {
+            color: $color-text-muted;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.contactBtn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: $color-white !important;
+    padding: 10px 20px;
+    border-radius: $radius-md;
+    transition: all 0.3s ease !important;
+
+    &:hover {
+        background: $color-white !important;
+        color: $color-bg !important;
+        transform: translateY(-2px);
+    }
+}

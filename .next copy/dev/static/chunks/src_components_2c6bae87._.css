@@ -1,0 +1,378 @@
+/* [project]/src/components/LoginGate.module.scss.module.css [app-client] (css) */
+.LoginGate-module-scss-module__ppI6LG__loginContainer {
+  background-image: radial-gradient(circle at 0 0, #1e293b, #0f172a);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.LoginGate-module-scss-module__ppI6LG__loginCard {
+  -webkit-backdrop-filter: blur(20px);
+  text-align: center;
+  background: #ffffff1a;
+  border: 1px solid #ffffff1a;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px #0000005e;
+}
+
+.LoginGate-module-scss-module__ppI6LG__loginCard h1 {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-text-fill-color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.LoginGate-module-scss-module__ppI6LG__loginCard p {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form {
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form input {
+  color: #fff;
+  background: #0003;
+  border: 1px solid #ffffff1a;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+  padding: 1rem;
+  transition: all .2s;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form input:focus {
+  background: #0006;
+  border-color: #38bdf8;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form .LoginGate-module-scss-module__ppI6LG__inputError {
+  border-color: #f87171;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form .LoginGate-module-scss-module__ppI6LG__errorMessage {
+  color: #f87171;
+  text-align: left;
+  font-size: .875rem;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form button {
+  color: #fff;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-weight: 600;
+  transition: opacity .2s;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form button:hover {
+  opacity: .9;
+}
+
+/* [project]/src/components/Hero.module.scss.module.css [app-client] (css) */
+.Hero-module-scss-module__lXQcIW__hero {
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding-top: 5rem;
+  display: flex;
+}
+
+.Hero-module-scss-module__lXQcIW__heroContent {
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .Hero-module-scss-module__lXQcIW__heroContent {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+}
+
+.Hero-module-scss-module__lXQcIW__textContent {
+  flex: 1;
+}
+
+.Hero-module-scss-module__lXQcIW__greeting {
+  color: #38bdf8;
+  margin-bottom: .5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: block;
+}
+
+.Hero-module-scss-module__lXQcIW__name {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-text-fill-color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: .5rem;
+}
+
+.Hero-module-scss-module__lXQcIW__role {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .Hero-module-scss-module__lXQcIW__role {
+    font-size: 1.25rem;
+  }
+}
+
+.Hero-module-scss-module__lXQcIW__description {
+  color: #f1f5f9;
+  max-width: 500px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .Hero-module-scss-module__lXQcIW__description {
+    margin: 0 auto;
+  }
+}
+
+.Hero-module-scss-module__lXQcIW__imageContent {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Hero-module-scss-module__lXQcIW__imagePlaceholder {
+  background: #ffffff0d;
+  border: 2px solid #38bdf8;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 50px #38bdf833;
+}
+
+.Hero-module-scss-module__lXQcIW__imagePlaceholder span {
+  color: #94a3b8;
+}
+
+.Hero-module-scss-module__lXQcIW__imagePlaceholder:before {
+  content: "";
+  background: radial-gradient(circle, #38bdf81a 0%, #0000 70%);
+  width: 200%;
+  height: 200%;
+  animation: 10s linear infinite Hero-module-scss-module__lXQcIW__rotate;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+}
+
+@keyframes Hero-module-scss-module__lXQcIW__rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* [project]/src/components/Experience.module.scss.module.css [app-client] (css) */
+.Experience-module-scss-module__8ZZ5WG__experienceSection {
+  position: relative;
+}
+
+.Experience-module-scss-module__8ZZ5WG__sectionTitle {
+  text-align: center;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-text-fill-color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 3rem;
+}
+
+.Experience-module-scss-module__8ZZ5WG__timeline {
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.Experience-module-scss-module__8ZZ5WG__jobCard {
+  -webkit-backdrop-filter: blur(10px);
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-left: 3px solid #38bdf8;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform .3s, background .3s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 30px #0000001a;
+}
+
+.Experience-module-scss-module__8ZZ5WG__jobCard:hover {
+  background: #ffffff14;
+  transform: translateX(5px);
+}
+
+.Experience-module-scss-module__8ZZ5WG__jobHeader {
+  border-bottom: 1px solid #ffffff1a;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .Experience-module-scss-module__8ZZ5WG__jobHeader {
+    flex-direction: column;
+    gap: .5rem;
+  }
+}
+
+.Experience-module-scss-module__8ZZ5WG__employer {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.Experience-module-scss-module__8ZZ5WG__period {
+  color: #f472b6;
+  font-family: monospace;
+  font-weight: 500;
+}
+
+.Experience-module-scss-module__8ZZ5WG__role {
+  color: #818cf8;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.Experience-module-scss-module__8ZZ5WG__description {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.Experience-module-scss-module__8ZZ5WG__projects {
+  margin-top: 1.5rem;
+}
+
+.Experience-module-scss-module__8ZZ5WG__projects h5 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  font-size: .9rem;
+}
+
+.Experience-module-scss-module__8ZZ5WG__projectGrid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  display: grid;
+}
+
+.Experience-module-scss-module__8ZZ5WG__projectItem {
+  background: #0003;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.Experience-module-scss-module__8ZZ5WG__projectItem h6 {
+  color: #38bdf8;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+}
+
+.Experience-module-scss-module__8ZZ5WG__projectItem p {
+  color: #f1f5f9;
+  margin-bottom: 0;
+  font-size: .9rem;
+}
+
+/* [project]/src/components/Downloads.module.scss.module.css [app-client] (css) */
+.Downloads-module-scss-module__VMUUdW__downloadsSection {
+  background: #0000001a;
+  padding-bottom: 10rem;
+}
+
+.Downloads-module-scss-module__VMUUdW__sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.Downloads-module-scss-module__VMUUdW__grid {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  display: flex;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard {
+  -webkit-backdrop-filter: blur(10px);
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  transition: transform .3s, box-shadow .3s;
+  box-shadow: 0 4px 30px #0000001a;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px #0003;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard {
+  text-align: center;
+  color: #f1f5f9;
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 250px;
+  padding: 3rem;
+  display: flex;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard:hover {
+  border-color: #38bdf8;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard:hover .Downloads-module-scss-module__VMUUdW__icon {
+  transform: scale(1.1)rotate(5deg);
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard:hover .Downloads-module-scss-module__VMUUdW__linkText {
+  color: #38bdf8;
+}
+
+.Downloads-module-scss-module__VMUUdW__icon {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  transition: transform .3s;
+}
+
+.Downloads-module-scss-module__VMUUdW__linkText {
+  color: #94a3b8;
+  margin-top: auto;
+  font-size: .9rem;
+  transition: color .3s;
+}
+
+/*# sourceMappingURL=src_components_2c6bae87._.css.map*/

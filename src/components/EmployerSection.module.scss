@@ -1,0 +1,169 @@
+@use '../styles/mixins' as *;
+@use '../styles/variables' as *;
+
+.employerSection {
+    margin-bottom: $spacing-xxl;
+    padding: $spacing-xl;
+    border-radius: $radius-lg;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    position: relative;
+    overflow: hidden;
+
+    // Decorative ambient glow based on brand color
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, var(--brand-color), transparent 70%);
+        opacity: 0.1;
+        filter: blur(50px);
+        pointer-events: none;
+        z-index: 0;
+    }
+}
+
+.header {
+    display: flex;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.logoContainer {
+    flex-shrink: 0;
+}
+
+.logoPlaceholder {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: $radius-md;
+    @include flex-center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--brand-color);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.logoImage {
+    width: 80px;
+    height: 80px;
+    object-fit: contain; // Ensure logo isn't cropped
+    background: rgba(255, 255, 255, 0.05); // Subtle background for logos with transparency
+    border-radius: $radius-md;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: $spacing-xs; // Add some padding so logo doesn't touch edges
+}
+
+.info {
+    flex: 1;
+}
+
+.name {
+    font-size: 2rem;
+    color: $color-white;
+    margin-bottom: $spacing-xs;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-sm;
+    color: $color-text-muted;
+    font-size: 1.1rem;
+
+    @include mobile {
+        justify-content: center;
+    }
+}
+
+.role {
+    color: var(--brand-color);
+}
+
+.dot {
+    opacity: 0.5;
+}
+
+.description {
+    max-width: 600px;
+    color: $color-text-muted;
+
+    @include mobile {
+        margin: 0 auto;
+    }
+}
+
+
+// Multiple roles timeline
+.roleTimeline {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-md;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: $spacing-md;
+    margin-top: $spacing-xs; // Separation from name
+}
+
+.roleItem {
+    position: relative;
+
+    // Dot on timeline
+    &::before {
+        content: '';
+        position: absolute;
+        left: -31px; // (24px padding + 2px border width + 5px extra shift)
+        top: 6px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: $color-bg-secondary;
+        border: 2px solid var(--brand-color);
+    }
+}
+
+.roleTitle {
+    color: var(--brand-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+}
+
+.rolePeriod {
+    font-size: 0.9rem;
+    color: $color-text-muted;
+    font-family: monospace;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: $radius-sm;
+}
+
+.roleDescription {
+    font-size: 0.95rem;
+    color: rgba($color-text-muted, 0.8);
+    margin-top: 4px;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: $spacing-md;
+    position: relative;
+    z-index: 1;
+}

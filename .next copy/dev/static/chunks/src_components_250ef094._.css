@@ -1,0 +1,500 @@
+/* [project]/src/components/LoginGate.module.scss.module.css [app-client] (css) */
+.LoginGate-module-scss-module__ppI6LG__loginContainer {
+  background-image: radial-gradient(circle at 0 0, #1e293b, #0f172a);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.LoginGate-module-scss-module__ppI6LG__loginCard {
+  -webkit-backdrop-filter: blur(20px);
+  text-align: center;
+  background: #ffffff1a;
+  border: 1px solid #ffffff1a;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px #0000005e;
+}
+
+.LoginGate-module-scss-module__ppI6LG__loginCard h1 {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-text-fill-color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.LoginGate-module-scss-module__ppI6LG__loginCard p {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form {
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form input {
+  color: #fff;
+  background: #0003;
+  border: 1px solid #ffffff1a;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+  padding: 1rem;
+  transition: all .2s;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form input:focus {
+  background: #0006;
+  border-color: #38bdf8;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form .LoginGate-module-scss-module__ppI6LG__inputError {
+  border-color: #f87171;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form .LoginGate-module-scss-module__ppI6LG__errorMessage {
+  color: #f87171;
+  text-align: left;
+  font-size: .875rem;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form button {
+  color: #fff;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-weight: 600;
+  transition: opacity .2s;
+}
+
+.LoginGate-module-scss-module__ppI6LG__form button:hover {
+  opacity: .9;
+}
+
+/* [project]/src/components/Hero.module.scss.module.css [app-client] (css) */
+.Hero-module-scss-module__lXQcIW__hero {
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding-top: 5rem;
+  display: flex;
+}
+
+.Hero-module-scss-module__lXQcIW__heroContent {
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .Hero-module-scss-module__lXQcIW__heroContent {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+}
+
+.Hero-module-scss-module__lXQcIW__textContent {
+  flex: 1;
+}
+
+.Hero-module-scss-module__lXQcIW__greeting {
+  color: #38bdf8;
+  margin-bottom: .5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: block;
+}
+
+.Hero-module-scss-module__lXQcIW__name {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-text-fill-color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: .5rem;
+}
+
+.Hero-module-scss-module__lXQcIW__role {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .Hero-module-scss-module__lXQcIW__role {
+    font-size: 1.25rem;
+  }
+}
+
+.Hero-module-scss-module__lXQcIW__description {
+  color: #f1f5f9;
+  max-width: 500px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .Hero-module-scss-module__lXQcIW__description {
+    margin: 0 auto;
+  }
+}
+
+.Hero-module-scss-module__lXQcIW__imageContent {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Hero-module-scss-module__lXQcIW__imagePlaceholder {
+  background: #ffffff0d;
+  border: 2px solid #38bdf8;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 50px #38bdf833;
+}
+
+.Hero-module-scss-module__lXQcIW__imagePlaceholder span {
+  color: #94a3b8;
+}
+
+.Hero-module-scss-module__lXQcIW__imagePlaceholder:before {
+  content: "";
+  background: radial-gradient(circle, #38bdf81a 0%, #0000 70%);
+  width: 200%;
+  height: 200%;
+  animation: 10s linear infinite Hero-module-scss-module__lXQcIW__rotate;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+}
+
+@keyframes Hero-module-scss-module__lXQcIW__rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* [project]/src/components/Experience.module.scss.module.css [app-client] (css) */
+.Experience-module-scss-module__8ZZ5WG__sectionTitle {
+  text-align: center;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-text-fill-color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+}
+
+.Experience-module-scss-module__8ZZ5WG__list {
+  flex-direction: column;
+  gap: 2rem;
+  display: flex;
+}
+
+/* [project]/src/components/EmployerSection.module.scss.module.css [app-client] (css) */
+.EmployerSection-module-scss-module__Ft3sZG__employerSection {
+  background: #ffffff05;
+  border: 1px solid #ffffff08;
+  border-radius: 20px;
+  margin-bottom: 5rem;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.EmployerSection-module-scss-module__Ft3sZG__employerSection:before {
+  content: "";
+  background: radial-gradient(circle, var(--brand-color), transparent 70%);
+  opacity: .1;
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.EmployerSection-module-scss-module__Ft3sZG__header {
+  z-index: 1;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .EmployerSection-module-scss-module__Ft3sZG__header {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.EmployerSection-module-scss-module__Ft3sZG__logoContainer {
+  flex-shrink: 0;
+}
+
+.EmployerSection-module-scss-module__Ft3sZG__logoPlaceholder {
+  width: 80px;
+  height: 80px;
+  color: var(--brand-color);
+  background: #ffffff0d;
+  border: 2px solid #ffffff1a;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.EmployerSection-module-scss-module__Ft3sZG__info {
+  flex: 1;
+}
+
+.EmployerSection-module-scss-module__Ft3sZG__name {
+  color: #fff;
+  margin-bottom: .5rem;
+  font-size: 2rem;
+}
+
+.EmployerSection-module-scss-module__Ft3sZG__meta {
+  color: #94a3b8;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .EmployerSection-module-scss-module__Ft3sZG__meta {
+    justify-content: center;
+  }
+}
+
+.EmployerSection-module-scss-module__Ft3sZG__role {
+  color: var(--brand-color);
+}
+
+.EmployerSection-module-scss-module__Ft3sZG__dot {
+  opacity: .5;
+}
+
+.EmployerSection-module-scss-module__Ft3sZG__description {
+  color: #94a3b8;
+  max-width: 600px;
+}
+
+@media (max-width: 480px) {
+  .EmployerSection-module-scss-module__Ft3sZG__description {
+    margin: 0 auto;
+  }
+}
+
+.EmployerSection-module-scss-module__Ft3sZG__projectsGrid {
+  z-index: 1;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  display: grid;
+  position: relative;
+}
+
+/* [project]/src/components/ProjectCard.module.scss.module.css [app-client] (css) */
+.ProjectCard-module-scss-module__p0dm1a__card {
+  background: #1e293b66;
+  border: 1px solid #ffffff0d;
+  border-radius: 12px;
+  flex-direction: column;
+  height: 100%;
+  transition: all .3s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__card:hover {
+  border-color: #38bdf84d;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -10px #00000080;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__card:hover .ProjectCard-module-scss-module__p0dm1a__overlay {
+  opacity: 1;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__card:hover .ProjectCard-module-scss-module__p0dm1a__placeholderImage {
+  transform: scale(1.1);
+}
+
+.ProjectCard-module-scss-module__p0dm1a__imageContainer {
+  background: #0f172a;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__placeholderImage {
+  background-color: #1e293b;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform .5s;
+  position: relative;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__placeholderImage:after {
+  content: "";
+  background: linear-gradient(45deg, #38bdf81a, #0000);
+  position: absolute;
+  inset: 0;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__overlay {
+  opacity: 0;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  background: #0f172a99;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .3s;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__viewProject {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: .5rem 1rem;
+  font-weight: 600;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__content {
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__title {
+  color: #fff;
+  margin-bottom: .5rem;
+  font-family: Outfit, sans-serif;
+  font-size: 1.25rem;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__description {
+  color: #94a3b8;
+  flex: 1;
+  margin-bottom: 1.5rem;
+  font-size: .95rem;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__tags {
+  flex-wrap: wrap;
+  gap: .5rem;
+  display: flex;
+}
+
+.ProjectCard-module-scss-module__p0dm1a__tag {
+  color: #38bdf8;
+  background: #38bdf81a;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+/* [project]/src/components/Downloads.module.scss.module.css [app-client] (css) */
+.Downloads-module-scss-module__VMUUdW__downloadsSection {
+  background: #0000001a;
+  padding-bottom: 10rem;
+}
+
+.Downloads-module-scss-module__VMUUdW__sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.Downloads-module-scss-module__VMUUdW__grid {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  display: flex;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard {
+  -webkit-backdrop-filter: blur(10px);
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  transition: transform .3s, box-shadow .3s;
+  box-shadow: 0 4px 30px #0000001a;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px #0003;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard {
+  text-align: center;
+  color: #f1f5f9;
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 250px;
+  padding: 3rem;
+  display: flex;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard:hover {
+  border-color: #38bdf8;
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard:hover .Downloads-module-scss-module__VMUUdW__icon {
+  transform: scale(1.1)rotate(5deg);
+}
+
+.Downloads-module-scss-module__VMUUdW__downloadCard:hover .Downloads-module-scss-module__VMUUdW__linkText {
+  color: #38bdf8;
+}
+
+.Downloads-module-scss-module__VMUUdW__icon {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  transition: transform .3s;
+}
+
+.Downloads-module-scss-module__VMUUdW__linkText {
+  color: #94a3b8;
+  margin-top: auto;
+  font-size: .9rem;
+  transition: color .3s;
+}
+
+/*# sourceMappingURL=src_components_250ef094._.css.map*/
